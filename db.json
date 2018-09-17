@@ -2,21 +2,21 @@
   "usuarios" :
   [ {"id": 1,
      "nombre": "Agustin",
-     "apellido": "Lucero"}
+     "apellido": "Lucero"},
     {"id": 2,
      "nombre": "Luciano",
-     "apellido": "Capraro"}
+     "apellido": "Capraro"},
     {"id": 3,
       "nombre": "Ramiro",
-      "apellido": "Gordon"}
+      "apellido": "Gordon"},
     {"id": 4,
       "nombre": "Santiago",
-      "apellido": "Rudolf"}
+      "apellido": "Rudolf"},
     {"id": 5,
       "nombre": "Juan Pablo",
-      "apellido": "Pardal"}
+      "apellido": "Pardal"},
     {"id": 6,
       "nombre": "Jose",
-      "apellido": "Cisneros"}    
+      "apellido": "Cisneros"}
   ]
 }
