@@ -30,7 +30,9 @@ function renderHtml(json) {
 function renderProducto(Usuario) {
 
     let html = `<li>${Usuario.nombre} ${Usuario.apellido}</li>`;
-
+    
     return html;
 
 }
+
+
