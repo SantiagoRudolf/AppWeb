@@ -182,7 +182,7 @@ $.getJSON("http://localhost:3001/Usuarios",function(data){
 		usu += '</tr>';
 		} else {
 			
-		if(nivel == valnivel){
+		if(nivel === valnivel){
 		usu += '<tr>';
 		usu += '<td>' +tipo+ '</td>';
 		usu += '<td>' +value.nombre+ '</td>';
@@ -190,7 +190,7 @@ $.getJSON("http://localhost:3001/Usuarios",function(data){
 		usu += '</tr>';
 		}
 		else {
-			if (tipo == valor){
+			if (tipo === valor){
 		usu += '<tr>';
 		usu += '<td>' +tipo+ '</td>';
 		usu += '<td>' +value.nombre+ '</td>';
@@ -207,6 +207,27 @@ $.getJSON("http://localhost:3001/Usuarios",function(data){
 	
 });
 });
+
+$('#search').keyup(function(){
+			
+			$('#result').html('');
+			var searchField = $('#search').val();
+			
+			var expression = new RegExp(searchField, "i");
+			$.getJSON('http://localhost:3001/Usuarios', function(data){
+
+
+				$.each(data, function(key, value){
+					if(value.nombre.search(expression) != -1 || value.apellido.search(expression) != -1)
+				{
+					$('#result').append('<li class="list-group-item>' +value.nombre+' | <span class="text-muted">' +value.apellido+ '</span></li>');
+				}
+				
+				
+			});
+		});
+	});
+
 });
 
 </script>
