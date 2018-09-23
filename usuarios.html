@@ -10,6 +10,7 @@
 	<meta name="author" content="freehtml5.co" />
 
 	<script language="JavaScript" type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
+	<script src ="js/Script.js"> </script>
 
 
   	<!-- Facebook and Twitter integration -->
@@ -117,7 +118,7 @@
 					<option value="cuatro">NIVEL 4</option>
 				</select>
 
-				<input type="text" class="form-control" placeholder="NOMBRE">
+				<input type="text" class="form-control" placeholder="NOMBRE" id="nombre">
 				<input type="button" class="btn btn-default" value="buscar" id="boton">
 			</div>
 		</form>
@@ -161,73 +162,7 @@
 			</div>
 		</div>
 	</div>
-<script>
-$(document).ready(function(){
-$('#boton').click(function(){
-	$("#employee_table").empty();
-$.getJSON("http://localhost:3001/Usuarios",function(data){
-	var usu = '';
-	$('#employee_table').append(usu);
-	console.log(data);
 
-	var valnivel = $('#nivel').val();
-	var valor = $('#TIPO').val();
-	$.each(data, function(key,value){
-		tipo = value.tipo;
-		nivel = value.nivel;
-		if (nivel == valnivel && valor == "0"){
-		usu += '<tr>';
-		usu += '<td>' +tipo+ '</td>';
-		usu += '<td>' +value.nombre+ '</td>';
-		usu += '<td>' +value.apellido+ '</td>';
-		usu += '</tr>';
-		} else {
-
-		if(valnivel === "0" && tipo == valor){
-		usu += '<tr>';
-		usu += '<td>' +tipo+ '</td>';
-		usu += '<td>' +value.nombre+ '</td>';
-		usu += '<td>' +value.apellido+ '</td>';
-		usu += '</tr>';
-		}
-		else {
-			if (tipo === valor && nivel == valnivel){
-		usu += '<tr>';
-		usu += '<td>' +tipo+ '</td>';
-		usu += '<td>' +value.nombre+ '</td>';
-		usu += '<td>' +value.apellido+ '</td>';
-		usu += '</tr>';
-}}}})
-	$('#employee_table').append(usu);
-})})})
-
-
-
-$(document).ready(function(){
-
-$('#search').keyup(function(){
-
-			$('#result').html('');
-			var searchField = $('#search').val();
-
-			var expression = new RegExp(searchField, "i");
-			$.getJSON('http://localhost:3001/Usuarios', function(data){
-
-
-				$.each(data, function(key, value){
-					if(value.nombre.search(expression) != -1 || value.apellido.search(expression) != -1)
-				{
-					$('#result').append('<li class="list-group-item>' +value.nombre+' | <span class="text-muted">' +value.apellido+ '</span></li>');
-				}
-
-
-			});
-		});
-	});
-
-});
-
-</script>
 <style>
 #result{
 	cursor:pointer;

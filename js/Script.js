@@ -39,40 +39,88 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
  	var usu = '';
  	$('#employee_table').append(usu);
 
- 	var valnivel = $('#nivel').val();
- 	var valor = $('#TIPO').val();
+ 	var nivel = $('#nivel').val();
+ 	var tipo = $('#TIPO').val();
+  var nombre = $('#nombre').val();
  	$.each(data, function(key,value){
- 		tipo = value.tipo;
- 		nivel = value.nivel;
- 		if (tipo == valor && nivel == valnivel){
- 		usu += '<tr>';
- 		usu += '<td>' +tipo+ '</td>';
- 		usu += '<td>' +value.nombre+ '</td>';
- 		usu += '<td>' +value.apellido+ '</td>';
- 		usu += '</tr>';
- 		} else {
+ 		ti = value.tipo;
+ 		niv = value.nivel;
+    nomb = value.nombre;
 
- 		if(nivel === valnivel){
- 		usu += '<tr>';
- 		usu += '<td>' +tipo+ '</td>';
- 		usu += '<td>' +value.nombre+ '</td>';
- 		usu += '<td>' +value.apellido+ '</td>';
- 		usu += '</tr>';
- 		}
- 		else {
- 			if (tipo === valor){
- 		usu += '<tr>';
- 		usu += '<td>' +tipo+ '</td>';
- 		usu += '<td>' +value.nombre+ '</td>';
- 		usu += '<td>' +value.apellido+ '</td>';
- 		usu += '</tr>';
+    if (nivel == niv && tipo == ti && nombre == nomb ) {
+      usu += '<tr>';
+   		usu += '<td>' +tipo+ '</td>';
+   		usu += '<td>' +value.nombre+ '</td>';
+   		usu += '<td>' +value.apellido+ '</td>';
+   		usu += '</tr>';
+    }
+    else {
 
- 		}
- 	}
- }
+          if (nivel == niv && tipo == ti && nombre == nomb ) {
+            usu += '<tr>';
+         		usu += '<td>' +tipo+ '</td>';
+         		usu += '<td>' +value.nombre+ '</td>';
+         		usu += '<td>' +value.apellido+ '</td>';
+         		usu += '</tr>';
+          }
+          else {
 
+                if (nivel == niv && tipo == ti && nombre == "" ) {
+                  usu += '<tr>';
+               		usu += '<td>' +tipo+ '</td>';
+               		usu += '<td>' +value.nombre+ '</td>';
+               		usu += '<td>' +value.apellido+ '</td>';
+               		usu += '</tr>';
+                }
+                else {
 
- 	});
+                      if (nivel == niv && tipo == "0" && nombre == nomb ) {
+                        usu += '<tr>';
+                     		usu += '<td>' +tipo+ '</td>';
+                     		usu += '<td>' +value.nombre+ '</td>';
+                     		usu += '<td>' +value.apellido+ '</td>';
+                     		usu += '</tr>';
+                      }
+                      else {
+
+                            if (nivel == "0" && tipo == ti && nombre == nomb ) {
+                              usu += '<tr>';
+                           		usu += '<td>' +tipo+ '</td>';
+                           		usu += '<td>' +value.nombre+ '</td>';
+                           		usu += '<td>' +value.apellido+ '</td>';
+                           		usu += '</tr>';
+                            }
+                            else {
+
+                                  if (nivel == niv && tipo == "0" && nombre == "" ) {
+                                    usu += '<tr>';
+                                 		usu += '<td>' +tipo+ '</td>';
+                                 		usu += '<td>' +value.nombre+ '</td>';
+                                 		usu += '<td>' +value.apellido+ '</td>';
+                                 		usu += '</tr>';
+                                  }
+                                  else {
+
+                                        if (nivel == "0" && tipo == ti && nombre == "" ) {
+                                          usu += '<tr>';
+                                       		usu += '<td>' +tipo+ '</td>';
+                                       		usu += '<td>' +value.nombre+ '</td>';
+                                       		usu += '<td>' +value.apellido+ '</td>';
+                                       		usu += '</tr>';
+                                        }
+                                        else {
+
+                                              if (nivel == "0" && tipo == "0" && nombre == nomb ) {
+                                                usu += '<tr>';
+                                             		usu += '<td>' +tipo+ '</td>';
+                                             		usu += '<td>' +value.nombre+ '</td>';
+                                             		usu += '<td>' +value.apellido+ '</td>';
+                                             		usu += '</tr>';
+                                              }
+                                            }}}}}}}})
+   if (usu =="") {
+     usu += ' <h3> no se encontraron resultados </h3>' ;
+   }
  	$('#employee_table').append(usu);
 
  });
