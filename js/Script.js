@@ -49,7 +49,7 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
 
     if (nivel == niv && tipo == ti && nombre == nomb ) {
       usu += '<tr>';
-   		usu += '<td>' +tipo+ '</td>';
+   		usu += '<td>' +value.tipo+ '</td>';
    		usu += '<td>' +value.nombre+ '</td>';
    		usu += '<td>' +value.apellido+ '</td>';
    		usu += '</tr>';
@@ -58,7 +58,7 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
 
           if (nivel == niv && tipo == ti && nombre == nomb ) {
             usu += '<tr>';
-         		usu += '<td>' +tipo+ '</td>';
+         		usu += '<td>' +value.tipo+ '</td>';
          		usu += '<td>' +value.nombre+ '</td>';
          		usu += '<td>' +value.apellido+ '</td>';
          		usu += '</tr>';
@@ -67,7 +67,7 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
 
                 if (nivel == niv && tipo == ti && nombre == "" ) {
                   usu += '<tr>';
-               		usu += '<td>' +tipo+ '</td>';
+               		usu += '<td>' +value.tipo+ '</td>';
                		usu += '<td>' +value.nombre+ '</td>';
                		usu += '<td>' +value.apellido+ '</td>';
                		usu += '</tr>';
@@ -76,7 +76,7 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
 
                       if (nivel == niv && tipo == "0" && nombre == nomb ) {
                         usu += '<tr>';
-                     		usu += '<td>' +tipo+ '</td>';
+                     		usu += '<td>' +value.tipo+ '</td>';
                      		usu += '<td>' +value.nombre+ '</td>';
                      		usu += '<td>' +value.apellido+ '</td>';
                      		usu += '</tr>';
@@ -85,7 +85,7 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
 
                             if (nivel == "0" && tipo == ti && nombre == nomb ) {
                               usu += '<tr>';
-                           		usu += '<td>' +tipo+ '</td>';
+                           		usu += '<td>' +value.tipo+ '</td>';
                            		usu += '<td>' +value.nombre+ '</td>';
                            		usu += '<td>' +value.apellido+ '</td>';
                            		usu += '</tr>';
@@ -94,7 +94,7 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
 
                                   if (nivel == niv && tipo == "0" && nombre == "" ) {
                                     usu += '<tr>';
-                                 		usu += '<td>' +tipo+ '</td>';
+                                 		usu += '<td>' +value.tipo+ '</td>';
                                  		usu += '<td>' +value.nombre+ '</td>';
                                  		usu += '<td>' +value.apellido+ '</td>';
                                  		usu += '</tr>';
@@ -103,7 +103,7 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
 
                                         if (nivel == "0" && tipo == ti && nombre == "" ) {
                                           usu += '<tr>';
-                                       		usu += '<td>' +tipo+ '</td>';
+                                       		usu += '<td>' +value.tipo+ '</td>';
                                        		usu += '<td>' +value.nombre+ '</td>';
                                        		usu += '<td>' +value.apellido+ '</td>';
                                        		usu += '</tr>';
@@ -112,14 +112,14 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
 
                                               if (nivel == "0" && tipo == "0" && nombre == nomb ) {
                                                 usu += '<tr>';
-                                             		usu += '<td>' +tipo+ '</td>';
+                                             		usu += '<td>' +value.tipo+ '</td>';
                                              		usu += '<td>' +value.nombre+ '</td>';
                                              		usu += '<td>' +value.apellido+ '</td>';
                                              		usu += '</tr>';
                                               }
                                             }}}}}}}})
    if (usu =="") {
-     usu += ' <h3> no se encontraron resultados </h3>' ;
+     usu += ' <h3> no se encontraron resultados </h3>';
    }
  	$('#employee_table').append(usu);
 
