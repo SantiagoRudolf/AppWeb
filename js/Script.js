@@ -54,6 +54,23 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
    		usu += '<td>' +value.nombre+ '</td>';
    		usu += '<td>' +value.apellido+ '</td>';
    		usu += '</tr>';
+        /*
+        AGREGA AL HISTORIAL
+        */
+        //data = ',{ "id": ' + value.id + ', "nombre": ' + value.nombre +',"apellido": '+ value.apellido +',"tipo": '+ value.tipo +',"nivel": ' + value.nivel + ' }'
+        $.ajax( {
+          url: "http://localhost:3000/historial ",
+          method : 'post', //en este caso
+          dataType : 'json',
+          type: "post",
+          data: value,
+          success: function( response ) {
+            console.log(value);
+          }
+        });
+        /*
+        TERIMA DE AGREGAR AL HISTORIAL
+        */
     }
     else {
 
@@ -63,6 +80,23 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
          		usu += '<td>' +value.nombre+ '</td>';
          		usu += '<td>' +value.apellido+ '</td>';
          		usu += '</tr>';
+            /*
+            AGREGA AL HISTORIAL
+            */
+            //data1 = ',{ "id": ' + value.id + ', "nombre": ' + value.nombre +',"apellido": '+ value.apellido +',"tipo": '+ value.tipo +',"nivel": ' + value.nivel + ' }'
+            $.ajax( {
+              url: "http://localhost:3000/historial ",
+              method : 'post', //en este caso
+              dataType : 'json',
+              type: "post",
+              data: value,
+              success: function( response ) {
+                console.log(value);
+              }
+            });
+            /*
+            TERIMA DE AGREGAR AL HISTORIAL
+            */
           }
           else {
 
@@ -72,6 +106,23 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
                		usu += '<td>' +value.nombre+ '</td>';
                		usu += '<td>' +value.apellido+ '</td>';
                		usu += '</tr>';
+                  /*
+                  AGREGA AL HISTORIAL
+                  */
+                  //data1 = ',{ "id": ' + value.id + ', "nombre": ' + value.nombre +',"apellido": '+ value.apellido +',"tipo": '+ value.tipo +',"nivel": ' + value.nivel + ' }'
+                  $.ajax( {
+                    url: "http://localhost:3000/historial ",
+                    method : 'post', //en este caso
+                    dataType : 'json',
+                    type: "post",
+                    data: value,
+                    success: function( response ) {
+                      console.log(value);
+                    }
+                  });
+                  /*
+                  TERIMA DE AGREGAR AL HISTORIAL
+                  */
                 }
                 else {
 
@@ -81,6 +132,23 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
                      		usu += '<td>' +value.nombre+ '</td>';
                      		usu += '<td>' +value.apellido+ '</td>';
                      		usu += '</tr>';
+                        /*
+                        AGREGA AL HISTORIAL
+                        */
+                        //data1 = ',{ "id": ' + value.id + ', "nombre": ' + value.nombre +',"apellido": '+ value.apellido +',"tipo": '+ value.tipo +',"nivel": ' + value.nivel + ' }'
+                        $.ajax( {
+                          url: "http://localhost:3000/historial ",
+                          method : 'post', //en este caso
+                          dataType : 'json',
+                          type: "post",
+                          data: value,
+                          success: function( response ) {
+                            console.log(value);
+                          }
+                        });
+                        /*
+                        TERIMA DE AGREGAR AL HISTORIAL
+                        */
                       }
                       else {
 
@@ -90,6 +158,23 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
                            		usu += '<td>' +value.nombre+ '</td>';
                            		usu += '<td>' +value.apellido+ '</td>';
                            		usu += '</tr>';
+                              /*
+                              AGREGA AL HISTORIAL
+                              */
+                              //data1 = ',{ "id": ' + value.id + ', "nombre": ' + value.nombre +',"apellido": '+ value.apellido +',"tipo": '+ value.tipo +',"nivel": ' + value.nivel + ' }'
+                              $.ajax( {
+                                url: "http://localhost:3000/historial ",
+                                method : 'post', //en este caso
+                                dataType : 'json',
+                                type: "post",
+                                data: value,
+                                success: function( response ) {
+                                  console.log(value);
+                                }
+                              });
+                              /*
+                              TERIMA DE AGREGAR AL HISTORIAL
+                              */
                             }
                             else {
 
@@ -99,6 +184,23 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
                                  		usu += '<td>' +value.nombre+ '</td>';
                                  		usu += '<td>' +value.apellido+ '</td>';
                                  		usu += '</tr>';
+                                    /*
+                                    AGREGA AL HISTORIAL
+                                    */
+                                    //data1 = ',{ "id": ' + value.id + ', "nombre": ' + value.nombre +',"apellido": '+ value.apellido +',"tipo": '+ value.tipo +',"nivel": ' + value.nivel + ' }'
+                                    $.ajax( {
+                                      url: "http://localhost:3000/historial ",
+                                      method : 'post', //en este caso
+                                      dataType : 'json',
+                                      type: "post",
+                                      data: value,
+                                      success: function( response ) {
+                                        console.log(value);
+                                      }
+                                    });
+                                    /*
+                                    TERIMA DE AGREGAR AL HISTORIAL
+                                    */
                                   }
                                   else {
 
@@ -108,6 +210,23 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
                                        		usu += '<td>' +value.nombre+ '</td>';
                                        		usu += '<td>' +value.apellido+ '</td>';
                                        		usu += '</tr>';
+                                          /*
+                                          AGREGA AL HISTORIAL
+                                          */
+                                          //data1 = ',{ "id": ' + value.id + ', "nombre": ' + value.nombre +',"apellido": '+ value.apellido +',"tipo": '+ value.tipo +',"nivel": ' + value.nivel + ' }'
+                                          $.ajax( {
+                                            url: "http://localhost:3000/historial ",
+                                            method : 'post', //en este caso
+                                            dataType : 'json',
+                                            type: "post",
+                                            data: value,
+                                            success: function( response ) {
+                                              console.log(value);
+                                            }
+                                          });
+                                          /*
+                                          TERIMA DE AGREGAR AL HISTORIAL
+                                          */
                                         }
                                         else {
 
@@ -117,6 +236,23 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
                                              		usu += '<td>' +value.nombre+ '</td>';
                                              		usu += '<td>' +value.apellido+ '</td>';
                                              		usu += '</tr>';
+                                                /*
+                                                AGREGA AL HISTORIAL
+                                                */
+                                                //data1 = ',{ "id": ' + value.id + ', "nombre": ' + value.nombre +',"apellido": '+ value.apellido +',"tipo": '+ value.tipo +',"nivel": ' + value.nivel + ' }'
+                                                $.ajax( {
+                                                  url: "http://localhost:3000/historial ",
+                                                  method : 'post', //en este caso
+                                                  dataType : 'json',
+                                                  type: "post",
+                                                  data: value,
+                                                  success: function( response ) {
+                                                    console.log(value);
+                                                  }
+                                                });
+                                                /*
+                                                TERIMA DE AGREGAR AL HISTORIAL
+                                                */
                                               }
                                             }}}}}}}})
    if (usu =="") {
@@ -157,8 +293,8 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
  $(document).ready(function(){
  $('#crear').click(function(e){
    e.preventDefault();
-var form = $('#nuevoUsuario');
-var data = $('#nuevoUsuario').serializeArray();
+   var form = $('#nuevoUsuario');
+   var data = $('#nuevoUsuario').serializeArray();
      $.ajax( {
        url: "http://localhost:3000/usuarios ",
        method : 'post', //en este caso
@@ -182,3 +318,36 @@ $('#crearrrr').click(function(){
   var data = $('#nuevoUsuario').serializeArray();
   console.log(data);
 })})
+
+
+//   HISTORAIAL!!!!!!!!!!!!!!!!!!!!!!!
+$(document).ready(function(){
+ $("#historial").empty();
+  $.getJSON("http://localhost:3000/historial",function(data){
+  $.each(data, function(key,value){
+    usu = '';
+    usu += '<tr>';
+    usu += '<td>' +value.tipo+ '</td>';
+    usu += '<td>' +value.nombre+ '</td>';
+    usu += '<td>' +value.apellido+ '</td>';
+    usu += '</tr>';
+  $('#historial').append(usu);
+});
+});
+});
+
+/*
+AGREGA AL HISTORIAL
+data = ',{ "id": ' + value.id + ', "nombre": ' + value.nombre +',"apellido": '+ value.apellido +',"tipo": '+ value.tipo +',"nivel": ' + value.nivel + ' }'
+$.ajax( {
+  url: "http://localhost:3000/historial ",
+  method : 'post', //en este caso
+  dataType : 'json',
+  type: "post",
+  data: data,
+  success: function( response ) {
+    console.log(data);
+  }
+});
+TERIMA DE AGREGAR AL HISTORIAL
+*/

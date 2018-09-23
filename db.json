@@ -42,6 +42,33 @@
       "tipo": "Boxeo",
       "nivel": "dos"
     },
-  
+    {
+      "nombre": "Gabriel",
+      "apellido": "Lopez",
+      "id": 7
+    }
+  ],
+  "historial": [
+    {
+      "id": 1,
+      "nombre": "Agustin",
+      "apellido": "Lucero",
+      "tipo": "gimnasio",
+      "nivel": "uno"
+    },
+    {
+      "id": "4",
+      "nombre": "Santiago",
+      "apellido": "Rudolf",
+      "tipo": "Boxeo",
+      "nivel": "cuatro"
+    },
+    {
+      "id": "2",
+      "nombre": "Luciano",
+      "apellido": "Capraro",
+      "tipo": "Boxeo",
+      "nivel": "dos"
+    }
   ]
 }
