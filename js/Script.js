@@ -37,6 +37,7 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
  	$("#employee_table").empty();
  $.getJSON("http://localhost:3001/Usuarios",function(data){
  	var usu = '';
+  console.log(data);
  	$('#employee_table').append(usu);
 
  	var nivel = $('#nivel').val();
@@ -150,3 +151,34 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
  	});
 
  });
+
+
+
+ $(document).ready(function(){
+ $('#crear').click(function(e){
+   e.preventDefault();
+var form = $('#nuevoUsuario');
+var data = $('#nuevoUsuario').serializeArray();
+     $.ajax( {
+       url: "http://localhost:3000/usuarios ",
+       method : 'post', //en este caso
+       dataType : 'json',
+       type: "post",
+       data: data,
+       success: function( response ) {
+         console.log(data);
+         console.log( response );
+         alert("el usuario se ha creado con exito")
+         form[0].reset();
+
+     }} );
+   } );
+
+ } );
+
+$(document).ready(function(){   // funcion de prueba
+$('#crearrrr').click(function(){
+  event.preventDefault();
+  var data = $('#nuevoUsuario').serializeArray();
+  console.log(data);
+})})

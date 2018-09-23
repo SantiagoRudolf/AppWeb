@@ -10,10 +10,11 @@
 	<meta name="author" content="freehtml5.co" />
 
 	<script language="JavaScript" type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
+	<script language="JavaScript" type="text/javascript" src="http://malsup.github.com/jquery.form.js"></script>
 	<script src ="js/Script.js"> </script>
 
 
-  	<!-- Facebook and Twitter integration -->
+  	<!-- Facebook and Twitter integration 	http://malsup.github.com/jquery.form.js
 	<meta property="og:title" content=""/>
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content=""/>
@@ -117,7 +118,6 @@
 					<option value="tres">NiVEL 3</option>
 					<option value="cuatro">NIVEL 4</option>
 				</select>
-
 				<input type="text" class="form-control" placeholder="NOMBRE" id="nombre">
 				<input type="button" class="btn btn-default" value="buscar" id="boton">
 			</div>
@@ -146,10 +146,12 @@
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center">
-<input type="text" class="form-control" placeholder="Nombre" style="margin-bottom:20px">
-<input type="text" class="form-control" placeholder="Apellido" style="margin-bottom:20px">
-	<button type="submit" class="btn btn-default"> Crear</button>
+					<form id="nuevoUsuario"  method="post" action="http://localhost:3000/usuarios ">
+<input type="text" class="form-control" name="nombre" placeholder="Nombre" style="margin-bottom:20px">
+<input type="text" class="form-control" name="apellido" placeholder="Apellido" style="margin-bottom:20px">
+	<button type="submit" class="btn btn-default" id="crear"> Crear</button>
 	<button type="submit" class="btn btn-default"> Cancelar</button>
+</form>
 </div>
 			</div>
 			<div class="row animate-box">
