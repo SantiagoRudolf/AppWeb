@@ -88,6 +88,13 @@
       "apellido": "Cisneros",
       "tipo": "Boxeo",
       "nivel": "dos"
+    },
+    {
+      "id": "3",
+      "nombre": "Ramiro",
+      "apellido": "Gordon",
+      "tipo": "gimnasio",
+      "nivel": "tres"
     }
   ]
 }
