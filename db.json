@@ -67,34 +67,6 @@
       "apellido": "Rudolf",
       "tipo": "Boxeo",
       "nivel": "cuatro"
-    },
-    {
-      "id": "2",
-      "nombre": "Luciano",
-      "apellido": "Capraro",
-      "tipo": "Boxeo",
-      "nivel": "dos"
-    },
-    {
-      "id": "6",
-      "nombre": "Jose",
-      "apellido": "Cisneros",
-      "tipo": "Boxeo",
-      "nivel": "dos"
-    },
-    {
-      "id": "5",
-      "nombre": "Juan Pablo",
-      "apellido": "Pardal",
-      "tipo": "gimnasio",
-      "nivel": "uno"
-    },
-    {
-      "id": "3",
-      "nombre": "Ramiro",
-      "apellido": "Gordon",
-      "tipo": "gimnasio",
-      "nivel": "tres"
     }
   ]
 }
