@@ -20,6 +20,33 @@
       "apellido": "Cisneros",
       "tipo": "Boxeo",
       "nivel": "dos"
+    },
+    {
+      "nombre": "Gabriel",
+      "apellido": "Lopez",
+      "id": 7
+    },
+    {
+      "nombre": "augusto",
+      "apellido": "cochita",
+      "id": 8
+    }
+  ],
+  "historial": [
+    {
+      "id": 1,
+      "nombre": "Agustin",
+      "apellido": "Lucero",
+      "tipo": "gimnasio",
+      "nivel": "uno"
+    },
+    {
+      "id": "4",
+      "nombre": "Santiago",
+      "apellido": "Rudolf",
+      "tipo": "Boxeo",
+      "nivel": "cuatro"
+
     }
   ]
 }
