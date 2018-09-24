@@ -1,27 +1,6 @@
 {
   "usuarios": [
     {
-      "id": 1,
-      "nombre": "Agustin",
-      "apellido": "Lucero",
-      "tipo": "gimnasio",
-      "nivel": "uno"
-    },
-    {
-      "id": 2,
-      "nombre": "Luciano",
-      "apellido": "Capraro",
-      "tipo": "Boxeo",
-      "nivel": "dos"
-    },
-    {
-      "id": 3,
-      "nombre": "Ramiro",
-      "apellido": "Gordon",
-      "tipo": "gimnasio",
-      "nivel": "tres"
-    },
-    {
       "id": 4,
       "nombre": "Santiago",
       "apellido": "Rudolf",
@@ -41,7 +20,6 @@
       "apellido": "Cisneros",
       "tipo": "Boxeo",
       "nivel": "dos"
-    },
-  
+    }
   ]
 }

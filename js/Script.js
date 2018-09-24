@@ -53,7 +53,7 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
    		usu += '<td>' +value.tipo+ '</td>';
    		usu += '<td>' +value.nombre+ '</td>';
        usu += '<td>' +value.apellido+ '</td>';
-       usu += '<td><span class="delete btn btn-danger" data-producto="'+ index.id +'">Borrar</span></td>';
+       usu += '<td><button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')" value="Eliminar">Eliminar</button></td>';
    		usu += '</tr>';
     }
     else {
@@ -63,7 +63,7 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
          		usu += '<td>' +value.tipo+ '</td>';
          		usu += '<td>' +value.nombre+ '</td>';
              usu += '<td>' +value.apellido+ '</td>';
-             usu += '<td><span class="delete btn btn-danger" data-producto="'+ index.id +'">Borrar</span></td>';
+             usu += '<td><button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')" value="Eliminar">Eliminar</button></td>';
          		usu += '</tr>';
           }
           else {
@@ -73,7 +73,7 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
                		usu += '<td>' +value.tipo+ '</td>';
                		usu += '<td>' +value.nombre+ '</td>';
                    usu += '<td>' +value.apellido+ '</td>';
-                   usu += '<td><span class="delete btn btn-danger" data-producto="'+ index.id +'">Borrar</span></td>';
+                   usu += '<td><button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')" value="Eliminar">Eliminar</button></td>';
                		usu += '</tr>';
                 }
                 else {
@@ -83,7 +83,7 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
                      		usu += '<td>' +value.tipo+ '</td>';
                      		usu += '<td>' +value.nombre+ '</td>';
                          usu += '<td>' +value.apellido+ '</td>';
-                         usu += '<td><span class="delete btn btn-danger" data-producto="'+ index.id +'">Borrar</span></td>';
+                         usu += '<td><button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')" value="Eliminar">Eliminar</button></td>';
                      		usu += '</tr>';
                       }
                       else {
@@ -93,7 +93,7 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
                            		usu += '<td>' +value.tipo+ '</td>';
                            		usu += '<td>' +value.nombre+ '</td>';
                                usu += '<td>' +value.apellido+ '</td>';
-                               usu += '<td><span class="delete btn btn-danger" data-producto="'+ index.id +'">Borrar</span></td>';
+                               usu += '<td><button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')" value="Eliminar">Eliminar</button></td>';
                            		usu += '</tr>';
                             }
                             else {
@@ -103,7 +103,7 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
                                  		usu += '<td>' +value.tipo+ '</td>';
                                  		usu += '<td>' +value.nombre+ '</td>';
                                      usu += '<td>' +value.apellido+ '</td>';
-                                     usu += '<td><span class="delete btn btn-danger" data-producto="'+ index.id +'">Borrar</span></td>';
+                                     usu += '<td><button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')" value="Eliminar">Eliminar</button></td>';
                                  		usu += '</tr>';
                                   }
                                   else {
@@ -113,7 +113,7 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
                                        		usu += '<td>' +value.tipo+ '</td>';
                                        		usu += '<td>' +value.nombre+ '</td>';
                                            usu += '<td>' +value.apellido+ '</td>';
-                                           usu += '<td><span class="delete btn btn-danger" data-producto="'+ index.id +'">Borrar</span></td>';
+                                           usu += '<td><button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')" value="Eliminar">Eliminar</button></td>';
                                        		usu += '</tr>';
                                         }
                                         else {
@@ -123,7 +123,7 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
                                              		usu += '<td>' +value.tipo+ '</td>';
                                              		usu += '<td>' +value.nombre+ '</td>';
                                                  usu += '<td>' +value.apellido+ '</td>';
-                                                 usu += '<td><span class="delete btn btn-danger" data-producto="'+ index.id +'">Borrar</span></td>';
+                                                 usu += '<td><button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')" value="Eliminar">Eliminar</button></td>';
                                              		usu += '</tr>';
                                               }
                                             }}}}}}}})
@@ -133,117 +133,9 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
  	$('#employee_table').append(usu);
 
  });
- });
- $(".delete").unbind("click").click(function(){
-  $.ajax({
-  url: "http://localhost:3001/Usuarios/"+$(this).data("producto"),
-  type: "DELETE",
-  success: function(response){
-  $("#employee_table").html("<tbody><tr><td>ID</td><td>NOMBRE</td><td>TIPO</td><td>NOMBRE</td><td>APELLIDO</td><td>ELIMINAR</td></tr></tbody>");
-  $.getJSON("http://localhost:3001/Usuarios",function(data){
- 	var usu = '';
-  console.log(data);
- 	$('#employee_table').append(usu);
-
- 	var nivel = $('#nivel').val();
- 	var tipo = $('#TIPO').val();
-  var nombre = $('#nombre').val();
- 	$.each(data, function(key,value){
- 		ti = value.tipo;
- 		niv = value.nivel;
-    nomb = value.nombre;
-
-    if (nivel == niv && tipo == ti && nombre == nomb ) {
-      usu += '<tr>';
-   		usu += '<td>' +value.tipo+ '</td>';
-   		usu += '<td>' +value.nombre+ '</td>';
-       usu += '<td>' +value.apellido+ '</td>';
-       usu += '<td><span class="delete btn btn-danger" data-producto="'+ value.id +'">Borrar</span></td>';
-   		usu += '</tr>';
-    }
-    else {
-
-          if (nivel == niv && tipo == ti && nombre == nomb ) {
-            usu += '<tr>';
-         		usu += '<td>' +value.tipo+ '</td>';
-         		usu += '<td>' +value.nombre+ '</td>';
-             usu += '<td>' +value.apellido+ '</td>';
-             usu += '<td><span class="delete btn btn-danger" data-producto="'+ value.id +'">Borrar</span></td>';
-         		usu += '</tr>';
-          }
-          else {
-
-                if (nivel == niv && tipo == ti && nombre == "" ) {
-                  usu += '<tr>';
-               		usu += '<td>' +value.tipo+ '</td>';
-               		usu += '<td>' +value.nombre+ '</td>';
-                   usu += '<td>' +value.apellido+ '</td>';
-                   usu += '<td><span class="delete btn btn-danger" data-producto="'+ value.id +'">Borrar</span></td>';
-               		usu += '</tr>';
-                }
-                else {
-
-                      if (nivel == niv && tipo == "0" && nombre == nomb ) {
-                        usu += '<tr>';
-                     		usu += '<td>' +value.tipo+ '</td>';
-                     		usu += '<td>' +value.nombre+ '</td>';
-                         usu += '<td>' +value.apellido+ '</td>';
-                         usu += '<td><span class="delete btn btn-danger" data-producto="'+ value.id +'">Borrar</span></td>';
-                     		usu += '</tr>';
-                      }
-                      else {
-
-                            if (nivel == "0" && tipo == ti && nombre == nomb ) {
-                              usu += '<tr>';
-                           		usu += '<td>' +value.tipo+ '</td>';
-                           		usu += '<td>' +value.nombre+ '</td>';
-                               usu += '<td>' +value.apellido+ '</td>';
-                               usu += '<td><span class="delete btn btn-danger" data-producto="'+ value.id +'">Borrar</span></td>';
-                           		usu += '</tr>';
-                            }
-                            else {
-
-                                  if (nivel == niv && tipo == "0" && nombre == "" ) {
-                                    usu += '<tr>';
-                                 		usu += '<td>' +value.tipo+ '</td>';
-                                 		usu += '<td>' +value.nombre+ '</td>';
-                                     usu += '<td>' +value.apellido+ '</td>';
-                                     usu += '<td><span class="delete btn btn-danger" data-producto="'+ value.id +'">Borrar</span></td>';
-                                 		usu += '</tr>';
-                                  }
-                                  else {
-
-                                        if (nivel == "0" && tipo == ti && nombre == "" ) {
-                                          usu += '<tr>';
-                                       		usu += '<td>' +value.tipo+ '</td>';
-                                       		usu += '<td>' +value.nombre+ '</td>';
-                                           usu += '<td>' +value.apellido+ '</td>';
-                                           usu += '<td><span class="delete btn btn-danger" data-producto="'+ value.id +'">Borrar</span></td>';
-                                       		usu += '</tr>';
-                                        }
-                                        else {
-
-                                              if (nivel == "0" && tipo == "0" && nombre == nomb ) {
-                                                usu += '<tr>';
-                                             		usu += '<td>' +value.tipo+ '</td>';
-                                             		usu += '<td>' +value.nombre+ '</td>';
-                                                 usu += '<td>' +value.apellido+ '</td>';
-                                                 usu += '<td><span class="delete btn btn-danger" data-producto="'+ value.id +'">Borrar</span></td>';
-                                             		usu += '</tr>';
-                                              }
-                                            }}}}}}}})
-   if (usu =="") {
-     usu += ' <h3> no se encontraron resultados </h3>';
-   }
- 	$('#employee_table').append(usu);
-
- });
-  $(".navbar-form navbar-left").data("data-producto", "0");
-  form[0].reset();
-  }
  
  });
-  });
+
  });
 
  $(document).ready(function(){
@@ -300,3 +192,9 @@ $('#crearrrr').click(function(){
   var data = $('#nuevoUsuario').serializeArray();
   console.log(data);
 })})
+
+
+
+
+
+ 
