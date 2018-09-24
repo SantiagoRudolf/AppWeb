@@ -1,13 +1,6 @@
 {
   "usuarios": [
     {
-      "id": 4,
-      "nombre": "Santiago",
-      "apellido": "Rudolf",
-      "tipo": "Boxeo",
-      "nivel": "cuatro"
-    },
-    {
       "id": 5,
       "nombre": "Juan Pablo",
       "apellido": "Pardal",
@@ -46,7 +39,20 @@
       "apellido": "Rudolf",
       "tipo": "Boxeo",
       "nivel": "cuatro"
-
+    },
+    {
+      "id": "5",
+      "nombre": "Juan Pablo",
+      "apellido": "Pardal",
+      "tipo": "gimnasio",
+      "nivel": "uno"
+    },
+    {
+      "id": "6",
+      "nombre": "Jose",
+      "apellido": "Cisneros",
+      "tipo": "Boxeo",
+      "nivel": "dos"
     }
   ]
 }
