@@ -7,7 +7,6 @@
 	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
 	<meta name="author" content="freehtml5.co" />
-
   	<!-- Facebook and Twitter integration -->
 	<meta property="og:title" content=""/>
 	<meta property="og:image" content=""/>
@@ -36,6 +35,10 @@
 
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
+
+	<script language="JavaScript" type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
+	<script language="JavaScript" type="text/javascript" src="http://malsup.github.com/jquery.form.js"></script>
+	<script src ="js/Script.js"> </script>
 
 
 	</head>
@@ -114,11 +117,11 @@
 						<div class="row form-group">
 							<div class="col-md-12">
 								<!-- <label for="message">Message</label> -->
-								<textarea name="message" id="message" cols="30" rows="10" class="form-control" value="a ver si pongo algo aca"></textarea>
+								<textarea name="message" id="message" cols="30" rows="10" class="form-control" ></textarea>
 							</div>
 						</div>
 						<div class="form-group">
-							<input type="submit" value="Send Message" class="btn btn-primary">
+							<input type="button" value="enviar" onclick="prueba()" id="botoncito" >
 						</div>
 
 					</form>

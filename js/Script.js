@@ -361,12 +361,21 @@ TERIMA DE AGREGAR AL HISTORIAL
 */
 function compartir(id){
   $.getJSON("http://localhost:3001/Usuarios",function(data){
+event.preventDefault();
     console.log(data);
     	$.each(data, function(key,value){
     if(value.id == id){
-      alert("el usuario es"+ value.nombre +  value.apellido);
+      var usuario = "nombre: "+value.nombre+ "Apellido: "+value.apellido ;
+      localStorage.setItem("usuario",usuario);
+    window.location.href = "compartir.html";
+
       //ahora falta meter estos datos en un lugar para compartirlos por mail
     }
 
   })
 })}
+
+$(window).ready(function(){
+  var usuario = localStorage.getItem("usuario");
+  console.log(usuario);
+  $("#message").val(usuario);})
