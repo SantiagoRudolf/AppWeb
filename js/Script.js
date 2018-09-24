@@ -53,6 +53,7 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
    		usu += '<td>' +value.tipo+ '</td>';
    		usu += '<td>' +value.nombre+ '</td>';
    		usu += '<td>' +value.apellido+ '</td>';
+        usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';
    		usu += '</tr>';
         /*
         AGREGA AL HISTORIAL
@@ -79,6 +80,7 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
          		usu += '<td>' +value.tipo+ '</td>';
          		usu += '<td>' +value.nombre+ '</td>';
          		usu += '<td>' +value.apellido+ '</td>';
+              usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';
          		usu += '</tr>';
             /*
             AGREGA AL HISTORIAL
@@ -105,6 +107,7 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
                		usu += '<td>' +value.tipo+ '</td>';
                		usu += '<td>' +value.nombre+ '</td>';
                		usu += '<td>' +value.apellido+ '</td>';
+                    usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';
                		usu += '</tr>';
                   /*
                   AGREGA AL HISTORIAL
@@ -131,6 +134,7 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
                      		usu += '<td>' +value.tipo+ '</td>';
                      		usu += '<td>' +value.nombre+ '</td>';
                      		usu += '<td>' +value.apellido+ '</td>';
+                          usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';
                      		usu += '</tr>';
                         /*
                         AGREGA AL HISTORIAL
@@ -157,6 +161,7 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
                            		usu += '<td>' +value.tipo+ '</td>';
                            		usu += '<td>' +value.nombre+ '</td>';
                            		usu += '<td>' +value.apellido+ '</td>';
+                                usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';
                            		usu += '</tr>';
                               /*
                               AGREGA AL HISTORIAL
@@ -183,6 +188,7 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
                                  		usu += '<td>' +value.tipo+ '</td>';
                                  		usu += '<td>' +value.nombre+ '</td>';
                                  		usu += '<td>' +value.apellido+ '</td>';
+                                      usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';
                                  		usu += '</tr>';
                                     /*
                                     AGREGA AL HISTORIAL
@@ -209,6 +215,7 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
                                        		usu += '<td>' +value.tipo+ '</td>';
                                        		usu += '<td>' +value.nombre+ '</td>';
                                        		usu += '<td>' +value.apellido+ '</td>';
+                                            usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';
                                        		usu += '</tr>';
                                           /*
                                           AGREGA AL HISTORIAL
@@ -235,6 +242,7 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
                                              		usu += '<td>' +value.tipo+ '</td>';
                                              		usu += '<td>' +value.nombre+ '</td>';
                                              		usu += '<td>' +value.apellido+ '</td>';
+                                                  usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';
                                              		usu += '</tr>';
                                                 /*
                                                 AGREGA AL HISTORIAL
@@ -351,3 +359,14 @@ $.ajax( {
 });
 TERIMA DE AGREGAR AL HISTORIAL
 */
+function compartir(id){
+  $.getJSON("http://localhost:3001/Usuarios",function(data){
+    console.log(data);
+    	$.each(data, function(key,value){
+    if(value.id == id){
+      alert("el usuario es"+ value.nombre +  value.apellido);
+      //ahora falta meter estos datos en un lugar para compartirlos por mail
+    }
+
+  })
+})}
