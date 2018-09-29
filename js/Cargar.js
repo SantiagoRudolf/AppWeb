@@ -29,7 +29,11 @@ function renderHtml(json) {
 
 function renderProducto(Usuario) {
 
+    if(Usuario.tipo == "gimnasio" ){
+
     let html = `<li>${Usuario.nombre} ${Usuario.apellido}</li>`;
+
+    }
     
     return html;
 

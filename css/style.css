@@ -1735,5 +1735,19 @@ h1, h2, h3, h4, h5, h6, figure {
 .js .animate-box {
   opacity: 0;
 }
+.navbar-form.navbar-left{
+  margin-left:11%;
+}
+#boton{
+  width:15%;
+}
+@media screen and (max-width: 820px) {
+  #boton {
+    width: 100%;
+  }
+  .navbar-form.navbar-left{
+    margin-left:0.5%;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
