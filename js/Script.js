@@ -34,11 +34,11 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
 
  $(document).ready(function(){
  $('#boton').click(function(){
- 	$("#employee_table").empty();
+ 	$("#itemContainer").empty();
  $.getJSON("http://localhost:3001/Usuarios",function(data){
  	var usu = '';
   console.log(data);
- 	$('#employee_table').append(usu);
+ 	$('#itemContainer').append(usu);
 
  	var estado = $('#estado').val();
  	var tipo = $('#TIPO').val();
@@ -63,13 +63,9 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
 
 
     if ( (estado == est || estado =="vacio") && (tipo == ti || tipo =="vacio")&& (nombre == nomb || nombre == "vacio")) {
-      usu += '<tr>';
-   		usu += '<td>' +value.tipo+ '</td>';
-   		usu += '<td>' +value.nombre+ '</td>';
-      usu += '<td>' +value.apellido+ '</td>';
-      usu += '<td><button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')" value="Eliminar">Eliminar</button></td>';
-      usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';
-   		usu += '</tr>';
+      usu += '<li class="list-group-item><span class="text-muted">' +value.nombre+'</span> | <span class="text-muted">' +value.apellido+ '</span>  | <span class="text-muted">' +value.estado+ '</span> | <button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')" value="Eliminar">Eliminar</button> | <button class="compartir " onclick="compartir('+value.id+')">Compartir</button></li>'
+     
+     
         /*
         AGREGA AL HISTORIAL
         */
@@ -94,7 +90,7 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
 if (usu =="") {
   usu += ' <h3> no se encontraron resultados </h3>';
 }
-$('#employee_table').append(usu);
+$('#itemContainer').append(usu);
 
 
  });
@@ -348,3 +344,18 @@ $(document).ready(function(){
    } );
 
  } );
+
+
+ $(document).ready(function () {
+  $(function(){
+  /* initiate the plugin */
+  $("div.holder").jPages({
+  containerID  : "itemContainer",
+  perPage      : 10,
+  startPage    : 1,
+  startRange   : 1,
+  midRange     : 5,
+  endRange     : 1
+  });
+});
+});
