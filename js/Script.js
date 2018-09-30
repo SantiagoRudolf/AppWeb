@@ -73,9 +73,8 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
         /*
         AGREGA AL HISTORIAL
         */
-        //data = ',{ "id": ' + value.id + ', "nombre": ' + value.nombre +',"apellido": '+ value.apellido +',"tipo": '+ value.tipo +',"estado": ' + value.estado + ' }'
         $.ajax( {
-          url: "http://localhost:3000/historial ",
+          url: "http://localhost:3000/historial",
           method : 'post', //en este caso
           dataType : 'json',
           type: "post",
@@ -180,21 +179,6 @@ $(document).ready(function(){
 });
 });
 
-/*
-AGREGA AL HISTORIAL
-data = ',{ "id": ' + value.id + ', "nombre": ' + value.nombre +',"apellido": '+ value.apellido +',"tipo": '+ value.tipo +',"nivel": ' + value.nivel + ' }'
-$.ajax( {
-  url: "http://localhost:3000/historial ",
-  method : 'post', //en este caso
-  dataType : 'json',
-  type: "post",
-  data: data,
-  success: function( response ) {
-    console.log(data);
-  }
-});
-TERIMA DE AGREGAR AL HISTORIAL
-*/
 function compartir(id){
   $.getJSON("http://localhost:3001/Usuarios",function(data){
 event.preventDefault();
@@ -213,7 +197,6 @@ event.preventDefault();
 
 $(window).ready(function(){
   var usuario = localStorage.getItem("usuario");
-  console.log(usuario);
   $("#message").val(usuario);})
 
 

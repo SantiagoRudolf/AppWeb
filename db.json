@@ -8,76 +8,6 @@
       "estado": "activo"
     },
     {
-      "id": 9,
-      "nombre": "Juan Pablo",
-      "apellido": "Pardal",
-      "tipo": "gimnasio",
-      "estado": "activo"
-    },
-    {
-      "id": 10,
-      "nombre": "Juan Pablo",
-      "apellido": "Pardal",
-      "tipo": "gimnasio",
-      "estado": "activo"
-    },
-    {
-      "id": 12,
-      "nombre": "Juan Pablo",
-      "apellido": "Pardal",
-      "tipo": "gimnasio",
-      "estado": "activo"
-    },
-    {
-      "id": 11,
-      "nombre": "Juan Pablo",
-      "apellido": "Pardal",
-      "tipo": "gimnasio",
-      "estado": "activo"
-    },
-    {
-      "id": 13,
-      "nombre": "Juan Pablo",
-      "apellido": "Pardal",
-      "tipo": "gimnasio",
-      "estado": "activo"
-    },
-    {
-      "id": 14,
-      "nombre": "Juan Pablo",
-      "apellido": "Pardal",
-      "tipo": "gimnasio",
-      "estado": "activo"
-    },
-    {
-      "id": 15,
-      "nombre": "Juan Pablo",
-      "apellido": "Pardal",
-      "tipo": "gimnasio",
-      "estado": "activo"
-    },
-    {
-      "id": 16,
-      "nombre": "Juan Pablo",
-      "apellido": "Pardal",
-      "tipo": "gimnasio",
-      "estado": "activo"
-    },
-    {
-      "id": 17,
-      "nombre": "Juan Pablo",
-      "apellido": "Pardal",
-      "tipo": "gimnasio",
-      "estado": "activo"
-    },
-    {
-      "id": 18,
-      "nombre": "Juan Pablo",
-      "apellido": "Pardal",
-      "tipo": "gimnasio",
-      "estado": "activo"
-    },
-    {
       "id": 6,
       "nombre": "Jose",
       "apellido": "Cisneros",
@@ -101,13 +31,6 @@
       "estado": "activo"
     },
     {
-      "id": "4",
-      "nombre": "Santiago",
-      "apellido": "Rudolf",
-      "tipo": "Boxeo",
-      "estado": "inactivo"
-    },
-    {
       "id": "5",
       "nombre": "Juan Pablo",
       "apellido": "Pardal",
@@ -115,95 +38,11 @@
       "estado": "activo"
     },
     {
-      "id": "2",
-      "nombre": "Luciano",
-      "apellido": "Capraro",
-      "tipo": "Boxeo",
-      "estado": "inactivo"
-    },
-    {
       "id": "6",
       "nombre": "Jose",
       "apellido": "Cisneros",
       "tipo": "Boxeo",
       "estado": "inactivo"
-    },
-    {
-      "id": "3",
-      "nombre": "Ramiro",
-      "apellido": "Gordon",
-      "tipo": "gimnasio",
-      "estado": "inactivo"
-    },
-    {
-      "id": "9",
-      "nombre": "Juan Pablo",
-      "apellido": "Pardal",
-      "tipo": "gimnasio",
-      "estado": "activo"
-    },
-    {
-      "id": "10",
-      "nombre": "Juan Pablo",
-      "apellido": "Pardal",
-      "tipo": "gimnasio",
-      "estado": "activo"
-    },
-    {
-      "id": "12",
-      "nombre": "Juan Pablo",
-      "apellido": "Pardal",
-      "tipo": "gimnasio",
-      "estado": "activo"
-    },
-    {
-      "id": "11",
-      "nombre": "Juan Pablo",
-      "apellido": "Pardal",
-      "tipo": "gimnasio",
-      "estado": "activo"
-    },
-    {
-      "id": "13",
-      "nombre": "Juan Pablo",
-      "apellido": "Pardal",
-      "tipo": "gimnasio",
-      "estado": "activo"
-    },
-    {
-      "id": "14",
-      "nombre": "Juan Pablo",
-      "apellido": "Pardal",
-      "tipo": "gimnasio",
-      "estado": "activo"
-    },
-    {
-      "id": "15",
-      "nombre": "Juan Pablo",
-      "apellido": "Pardal",
-      "tipo": "gimnasio",
-      "estado": "activo"
-    },
-    {
-      "id": "16",
-      "nombre": "Juan Pablo",
-      "apellido": "Pardal",
-      "tipo": "gimnasio",
-      "estado": "activo"
-    },
-    {
-      "id": "17",
-      "nombre": "Juan Pablo",
-      "apellido": "Pardal",
-      "tipo": "gimnasio",
-      "estado": "activo"
-    },
-    {
-      "id": "18",
-      "nombre": "Juan Pablo",
-      "apellido": "Pardal",
-      "tipo": "gimnasio",
-      "estado": "activo"
     },
     {
       "nombre": "agustin",
