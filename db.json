@@ -20,9 +20,26 @@
       "id": 7
     },
     {
-      "nombre": "augusto",
-      "apellido": "cochita",
+      "nombre": "prueba4",
+      "apellido": "prueba4",
       "id": 8
+    },
+    {
+      "nombre": "chupoa ",
+      "apellido": "elPeluca",
+      "id": 9
+    },
+    {
+      "nombre": "ramiro",
+      "apellido": "gordon",
+      "tipo": "gimnasio",
+      "id": 10
+    },
+    {
+      "nombre": "roberto",
+      "apellido": "luceros",
+      "tipo": "Crossfit",
+      "id": 11
     }
   ],
   "historial": [
@@ -67,6 +84,34 @@
       "apellido": "Gordon",
       "tipo": "gimnasio",
       "nivel": "tres"
+    },
+    {
+      "nombre": "augusto",
+      "apellido": "cochita",
+      "id": "8"
+    },
+    {
+      "nombre": "augusto",
+      "apellido": "prueba",
+      "id": "9"
+    },
+    {
+      "nombre": "ramirete",
+      "apellido": "regordete",
+      "tipo": "gimnasio",
+      "id": "11"
+    },
+    {
+      "nombre": "ramirin",
+      "apellido": "Gordin",
+      "tipoo": "gimnasio",
+      "id": "10"
+    },
+    {
+      "nombre": "Martin",
+      "apellido": "Sitnyk",
+      "tipo": "Boxeo",
+      "id": "12"
     }
   ]
 }

@@ -1357,7 +1357,7 @@ pre code {
   }
 
   .col-md-3 {
-    width: 25%;
+    width: 33%;
   }
 
   .col-md-4 {
@@ -2919,9 +2919,7 @@ input[type="button"].btn-block {
   opacity: 1;
 }
 
-.collapse {
-  display: none;
-}
+
 .collapse.in {
   display: block;
 }
