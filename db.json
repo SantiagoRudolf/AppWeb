@@ -13,13 +13,6 @@
       "apellido": "Cisneros",
       "tipo": "Boxeo",
       "estado": "inactivo"
-    },
-    {
-      "nombre": "agustin",
-      "apellido": "anunciata",
-      "tipo": "gimnasio",
-      "estado": "activo",
-      "id": 19
     }
   ],
   "historial": [
@@ -50,6 +43,13 @@
       "tipo": "gimnasio",
       "estado": "activo",
       "id": "19"
+    },
+    {
+      "nombre": "agustin",
+      "apellido": "anunciata",
+      "tipo": "Boxeo",
+      "estado": "activo",
+      "id": "20"
     }
   ]
 }
