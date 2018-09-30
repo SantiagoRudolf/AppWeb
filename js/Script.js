@@ -40,15 +40,29 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
   console.log(data);
  	$('#employee_table').append(usu);
 
- 	var nivel = $('#nivel').val();
+ 	var estado = $('#estado').val();
  	var tipo = $('#TIPO').val();
   var nombre = $('#nombre').val();
+
+ if( tipo == "0"){
+   tipo = "vacio";
+ }
+ if (estado == "0"){
+   estado = "vacio";
+ }
+ if (nombre == ""){
+   nombre = "vacio";
+ }
  	$.each(data, function(key,value){
  		ti = value.tipo;
- 		niv = value.nivel;
+ 		est = value.estado;
     nomb = value.nombre;
+  console.log(tipo);
+  console.log(estado);
+  console.log(nombre);
 
-    if (nivel == niv && tipo == ti && nombre == nomb ) {
+
+    if ( (estado == est || estado =="vacio") && (tipo == ti || tipo =="vacio")&& (nombre == nomb || nombre == "vacio")) {
       usu += '<tr>';
    		usu += '<td>' +value.tipo+ '</td>';
    		usu += '<td>' +value.nombre+ '</td>';
@@ -59,7 +73,7 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
         /*
         AGREGA AL HISTORIAL
         */
-        //data = ',{ "id": ' + value.id + ', "nombre": ' + value.nombre +',"apellido": '+ value.apellido +',"tipo": '+ value.tipo +',"nivel": ' + value.nivel + ' }'
+        //data = ',{ "id": ' + value.id + ', "nombre": ' + value.nombre +',"apellido": '+ value.apellido +',"tipo": '+ value.tipo +',"estado": ' + value.estado + ' }'
         $.ajax( {
           url: "http://localhost:3000/historial ",
           method : 'post', //en este caso
@@ -74,218 +88,25 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
         TERIMA DE AGREGAR AL HISTORIAL
         */
     }
-    else {
 
-          if (nivel == niv && tipo == ti && nombre == nomb ) {
-            usu += '<tr>';
-         		usu += '<td>' +value.tipo+ '</td>';
-         		usu += '<td>' +value.nombre+ '</td>';
-             usu += '<td>' +value.apellido+ '</td>';
-             usu += '<td><button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')" value="Eliminar">Eliminar</button></td>';
-              usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';
-         		usu += '</tr>';
-            /*
-            AGREGA AL HISTORIAL
-            */
-            //data1 = ',{ "id": ' + value.id + ', "nombre": ' + value.nombre +',"apellido": '+ value.apellido +',"tipo": '+ value.tipo +',"nivel": ' + value.nivel + ' }'
-            $.ajax( {
-              url: "http://localhost:3000/historial ",
-              method : 'post', //en este caso
-              dataType : 'json',
-              type: "post",
-              data: value,
-              success: function( response ) {
-                console.log(value);
-              }
-            });
-            /*
-            TERIMA DE AGREGAR AL HISTORIAL
-            */
-          }
-          else {
 
-                if (nivel == niv && tipo == ti && nombre == "" ) {
-                  usu += '<tr>';
-               		usu += '<td>' +value.tipo+ '</td>';
-               		usu += '<td>' +value.nombre+ '</td>';
-                   usu += '<td>' +value.apellido+ '</td>';
-                   usu += '<td><button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')" value="Eliminar">Eliminar</button></td>';
-                    usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';
-               		usu += '</tr>';
-                  /*
-                  AGREGA AL HISTORIAL
-                  */
-                  //data1 = ',{ "id": ' + value.id + ', "nombre": ' + value.nombre +',"apellido": '+ value.apellido +',"tipo": '+ value.tipo +',"nivel": ' + value.nivel + ' }'
-                  $.ajax( {
-                    url: "http://localhost:3000/historial ",
-                    method : 'post', //en este caso
-                    dataType : 'json',
-                    type: "post",
-                    data: value,
-                    success: function( response ) {
-                      console.log(value);
-                    }
-                  });
-                  /*
-                  TERIMA DE AGREGAR AL HISTORIAL
-                  */
-                }
-                else {
+})
 
-                      if (nivel == niv && tipo == "0" && nombre == nomb ) {
-                        usu += '<tr>';
-                     		usu += '<td>' +value.tipo+ '</td>';
-                     		usu += '<td>' +value.nombre+ '</td>';
+if (usu =="") {
+  usu += ' <h3> no se encontraron resultados </h3>';
+}
+$('#employee_table').append(usu);
 
-                         usu += '<td>' +value.apellido+ '</td>';
-                         usu += '<td><button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')" value="Eliminar">Eliminar</button></td>';
-                        usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';
-                     		usu += '</tr>';
-                        /*
-                        AGREGA AL HISTORIAL
-                        */
-                        //data1 = ',{ "id": ' + value.id + ', "nombre": ' + value.nombre +',"apellido": '+ value.apellido +',"tipo": '+ value.tipo +',"nivel": ' + value.nivel + ' }'
-                        $.ajax( {
-                          url: "http://localhost:3000/historial ",
-                          method : 'post', //en este caso
-                          dataType : 'json',
-                          type: "post",
-                          data: value,
-                          success: function( response ) {
-                            console.log(value);
-                          }
-                        });
-                        /*
-                        TERIMA DE AGREGAR AL HISTORIAL
-                        */
-                      }
-                      else {
-
-                            if (nivel == "0" && tipo == ti && nombre == nomb ) {
-                              usu += '<tr>';
-                           		usu += '<td>' +value.tipo+ '</td>';
-                           		usu += '<td>' +value.nombre+ '</td>';
-                               usu += '<td>' +value.apellido+ '</td>';
-                               usu += '<td><button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')" value="Eliminar">Eliminar</button></td>';
-                                usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';
-                           		usu += '</tr>';
-                              /*
-                              AGREGA AL HISTORIAL
-                              */
-                              //data1 = ',{ "id": ' + value.id + ', "nombre": ' + value.nombre +',"apellido": '+ value.apellido +',"tipo": '+ value.tipo +',"nivel": ' + value.nivel + ' }'
-                              $.ajax( {
-                                url: "http://localhost:3000/historial ",
-                                method : 'post', //en este caso
-                                dataType : 'json',
-                                type: "post",
-                                data: value,
-                                success: function( response ) {
-                                  console.log(value);
-                                }
-                              });
-                              /*
-                              TERIMA DE AGREGAR AL HISTORIAL
-                              */
-                            }
-                            else {
-
-                                  if (nivel == niv && tipo == "0" && nombre == "" ) {
-                                    usu += '<tr>';
-                                 		usu += '<td>' +value.tipo+ '</td>';
-                                     usu += '<td>' +value.nombre+ '</td>';
-                                     usu += '<td>' +value.apellido+ '</td>';
-                                    usu += '<td><button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')" value="Eliminar">Eliminar</button></td>';
-
-                                    usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';
-                                		usu += '</tr>';
-                                    /*
-                                    AGREGA AL HISTORIAL
-                                    */
-                                    //data1 = ',{ "id": ' + value.id + ', "nombre": ' + value.nombre +',"apellido": '+ value.apellido +',"tipo": '+ value.tipo +',"nivel": ' + value.nivel + ' }'
-                                    $.ajax( {
-                                      url: "http://localhost:3000/historial ",
-                                      method : 'post', //en este caso
-                                      dataType : 'json',
-                                      type: "post",
-                                      data: value,
-                                      success: function( response ) {
-                                        console.log(value);
-                                      }
-                                    });
-                                    /*
-                                    TERIMA DE AGREGAR AL HISTORIAL
-                                    */
-                                  }
-                                  else {
-
-                                        if (nivel == "0" && tipo == ti && nombre == "" ) {
-                                          usu += '<tr>';
-                                       		usu += '<td>' +value.tipo+ '</td>';
-                                          usu += '<td>' +value.nombre+ '</td>';
-                                          usu += '<td>' +value.apellido+ '</td>';
-                                          usu += '<td><button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')" value="Eliminar">Eliminar</button></td>';
-
-                                          usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';
-                                       		usu += '</tr>';
-                                          /*
-                                          AGREGA AL HISTORIAL
-                                          */
-                                          //data1 = ',{ "id": ' + value.id + ', "nombre": ' + value.nombre +',"apellido": '+ value.apellido +',"tipo": '+ value.tipo +',"nivel": ' + value.nivel + ' }'
-                                          $.ajax( {
-                                            url: "http://localhost:3000/historial ",
-                                            method : 'post', //en este caso
-                                            dataType : 'json',
-                                            type: "post",
-                                            data: value,
-                                            success: function( response ) {
-                                              console.log(value);
-                                            }
-                                          });
-                                          /*
-                                          TERIMA DE AGREGAR AL HISTORIAL
-                                          */
-                                        }
-                                        else {
-
-                                              if (nivel == "0" && tipo == "0" && nombre == nomb ) {
-                                                usu += '<tr>';
-                                             		usu += '<td>' +value.tipo+ '</td>';
-                                             		usu += '<td>' +value.nombre+ '</td>';
-                                                 usu += '<td>' +value.apellido+ '</td>';
-                                                 usu += '<td><button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')" value="Eliminar">Eliminar</button></td>';
-                                                  usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';
-                                             		usu += '</tr>';
-                                                /*
-                                                AGREGA AL HISTORIAL
-                                                */
-                                                //data1 = ',{ "id": ' + value.id + ', "nombre": ' + value.nombre +',"apellido": '+ value.apellido +',"tipo": '+ value.tipo +',"nivel": ' + value.nivel + ' }'
-                                                $.ajax( {
-                                                  url: "http://localhost:3000/historial ",
-                                                  method : 'post', //en este caso
-                                                  dataType : 'json',
-                                                  type: "post",
-                                                  data: value,
-                                                  success: function( response ) {
-                                                    console.log(value);
-                                                  }
-                                                });
-                                                /*
-                                                TERIMA DE AGREGAR AL HISTORIAL
-                                                */
-                                              }
-                                            }}}}}}}})
-   if (usu =="") {
-     usu += ' <h3> no se encontraron resultados </h3>';
-   }
- 	$('#employee_table').append(usu);
 
  });
 
  });
+})
 
- });
 
- $(document).ready(function(){
+
+
+$(document).ready(function(){
 
  $('#search').keyup(function(){
 
