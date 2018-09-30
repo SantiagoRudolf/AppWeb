@@ -195,7 +195,7 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
                                      usu += '<td>' +value.nombre+ '</td>';
                                      usu += '<td>' +value.apellido+ '</td>';
                                     usu += '<td><button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')" value="Eliminar">Eliminar</button></td>';
-                                		
+
                                     usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';
                                 		usu += '</tr>';
                                     /*
@@ -224,7 +224,7 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
                                           usu += '<td>' +value.nombre+ '</td>';
                                           usu += '<td>' +value.apellido+ '</td>';
                                           usu += '<td><button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')" value="Eliminar">Eliminar</button></td>';
-                                       		
+
                                           usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';
                                        		usu += '</tr>';
                                           /*
@@ -280,7 +280,7 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
  	$('#employee_table').append(usu);
 
  });
- 
+
  });
 
  });
@@ -458,7 +458,7 @@ usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compar
                  usu += '<td>' +value.nombre+ '</td>';
                  usu += '<td>' +value.apellido+ '</td>';
                  usu += '<td><button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')" value="Eliminar">Eliminar</button></td>';
-     usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';	 
+     usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';
      usu += '</tr>';
               }
               else {
@@ -469,7 +469,7 @@ usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compar
                        usu += '<td>' +value.nombre+ '</td>';
                        usu += '<td>' +value.apellido+ '</td>';
                        usu += '<td><button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')" value="Eliminar">Eliminar</button></td>';
-         usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';	   
+         usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';
          usu += '</tr>';
                     }
                     else {
@@ -480,7 +480,7 @@ usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compar
                              usu += '<td>' +value.nombre+ '</td>';
                              usu += '<td>' +value.apellido+ '</td>';
                              usu += '<td><button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')" value="Eliminar">Eliminar</button></td>';
-           usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';	 
+           usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';
            usu += '</tr>';
                           }
                           else {
@@ -491,7 +491,7 @@ usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compar
                                    usu += '<td>' +value.nombre+ '</td>';
                                    usu += '<td>' +value.apellido+ '</td>';
                                    usu += '<td><button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')" value="Eliminar">Eliminar</button></td>';
-               usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';	   
+               usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';
                usu += '</tr>';
                                 }
                                 else {
@@ -502,7 +502,7 @@ usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compar
                                          usu += '<td>' +value.nombre+ '</td>';
                                          usu += '<td>' +value.apellido+ '</td>';
                                          usu += '<td><button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')" value="Eliminar">Eliminar</button></td>';
-                 usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';	 
+                 usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';
                  usu += '</tr>';
                                       }
                                     }}}}}}}})
@@ -521,3 +521,26 @@ $('#employee_table').append(usu);
 
 }
 
+
+
+$(document).ready(function(){
+ $('#crear').click(function(e){
+   e.preventDefault();
+   var form = $('#formmail');
+   var data = $('#formmail').serializeArray();
+     $.ajax( {
+       url: "https://formspree.io/stamina.gym.11@gmail.com ",
+       method : 'post', //en este caso
+       dataType : 'json',
+       type: "post",
+       data: data,
+       success: function( response ) {
+         console.log(data);
+         console.log( response );
+         alert("el usuario se ha creado con exito")
+         form[0].reset();
+
+     }} );
+   } );
+
+ } );
