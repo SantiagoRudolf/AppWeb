@@ -43,6 +43,7 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
  	var estado = $('#estado').val();
  	var tipo = $('#TIPO').val();
   var nombre = $('#nombre').val();
+  var i = 1;
 
  if( tipo == "0"){
    tipo = "vacio";
@@ -62,7 +63,7 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
   console.log(nombre);
 
 
-    if ( (estado == est || estado =="vacio") && (tipo == ti || tipo =="vacio")&& (nombre == nomb || nombre == "vacio")) {
+    if ( (estado == est || estado =="vacio") && (tipo == ti || tipo =="vacio")&& (nombre == nomb || nombre == "vacio") && i <10) {
       usu += '<div class="col-md-3 animate-box fadeInUp animated-fast" id=div'+value.id+'>';
    		usu += '<p> Nombre: ' +value.nombre+ '</p>';
       usu += '<p> Apellido: ' +value.apellido+ '</p>';
@@ -72,6 +73,7 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
       usu += '<button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')"  value="Eliminar">Eliminar</button>';
       usu +=  '<button class="compartir" onclick="compartir('+value.id+')">Compartir</button>';
    		usu += '</div>';
+      i= i+1;
         /*
         AGREGA AL HISTORIAL
         */
@@ -93,6 +95,10 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
 
 
 })
+if (i==10){
+  $('#vermas').append('<button class="compartir" onclick="vermas()">ver mas </button>')
+
+}
 
 if (usu =="") {
   usu += ' <h3> no se encontraron resultados </h3>';
@@ -252,3 +258,81 @@ $(document).ready(function(){
    } );
 
  } );
+
+
+
+ ////funcion ver mas
+
+ function vermas(){
+ $.getJSON("http://localhost:3001/Usuarios",function(data){
+   var usu = '';
+  console.log(data);
+   $('#resultados').text("");
+    $('#vermas').text("");
+
+   var estado = $('#estado').val();
+   var tipo = $('#TIPO').val();
+  var nombre = $('#nombre').val();
+
+
+ if( tipo == "0"){
+   tipo = "vacio";
+ }
+ if (estado == "0"){
+   estado = "vacio";
+ }
+ if (nombre == ""){
+   nombre = "vacio";
+ }
+   $.each(data, function(key,value){
+     ti = value.tipo;
+     est = value.estado;
+    nomb = value.nombre;
+
+
+
+    if ( (estado == est || estado =="vacio") && (tipo == ti || tipo =="vacio")&& (nombre == nomb || nombre == "vacio") ) {
+      usu += '<div class="col-md-3 animate-box fadeInUp animated-fast" id=div'+value.id+'>';
+       usu += '<p> Nombre: ' +value.nombre+ '</p>';
+      usu += '<p> Apellido: ' +value.apellido+ '</p>';
+       usu += '<p> Tipo: ' +value.tipo+'</p>';
+       usu += '<p> Estado: ' +value.estado+'</p>';
+
+      usu += '<button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')"  value="Eliminar">Eliminar</button>';
+      usu +=  '<button class="compartir" onclick="compartir('+value.id+')">Compartir</button>';
+       usu += '</div>';
+
+        /*
+        AGREGA AL HISTORIAL
+        */
+        //data = ',{ "id": ' + value.id + ', "nombre": ' + value.nombre +',"apellido": '+ value.apellido +',"tipo": '+ value.tipo +',"estado": ' + value.estado + ' }'
+        $.ajax( {
+          url: "http://localhost:3000/historial ",
+          method : 'post', //en este caso
+          dataType : 'json',
+          type: "post",
+          data: value,
+          success: function( response ) {
+            console.log(value);
+          }
+        });
+        /*
+        TERIMA DE AGREGAR AL HISTORIAL
+        */
+    }
+
+
+})
+
+
+
+
+if (usu =="") {
+  usu += ' <h3> no se encontraron resultados </h3>';
+}
+$('#resultados').append(usu);
+
+
+ });
+
+ }

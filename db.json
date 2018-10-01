@@ -48,6 +48,41 @@
       "tipo": "Spining",
       "estado": "activo",
       "id": 14
+    },
+    {
+      "nombre": "augusto",
+      "apellido": "prueba",
+      "tipo": "Spining",
+      "estado": "activo",
+      "id": 15
+    },
+    {
+      "nombre": "prueba1",
+      "apellido": "prueba1",
+      "tipo": "Spining",
+      "estado": "activo",
+      "id": 16
+    },
+    {
+      "nombre": "diego",
+      "apellido": "perez",
+      "tipo": "Spining",
+      "estado": "activo",
+      "id": 17
+    },
+    {
+      "nombre": "juan",
+      "apellido": "rudolf",
+      "tipo": "Spining",
+      "estado": "activo",
+      "id": 18
+    },
+    {
+      "nombre": "augusto",
+      "apellido": "alvarez",
+      "tipo": "Spining",
+      "estado": "activo",
+      "id": 19
     }
   ],
   "historial": [
@@ -148,6 +183,27 @@
       "tipo": "Spining",
       "estado": "activo",
       "id": "15"
+    },
+    {
+      "nombre": "prueba1",
+      "apellido": "prueba1",
+      "tipo": "Spining",
+      "estado": "activo",
+      "id": "16"
+    },
+    {
+      "nombre": "diego",
+      "apellido": "perez",
+      "tipo": "Spining",
+      "estado": "activo",
+      "id": "17"
+    },
+    {
+      "nombre": "juan",
+      "apellido": "rudolf",
+      "tipo": "Spining",
+      "estado": "activo",
+      "id": "18"
     }
   ]
 }
