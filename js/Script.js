@@ -38,7 +38,7 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
  $.getJSON("http://localhost:3001/Usuarios",function(data){
  	var usu = '';
   console.log(data);
- 	$('#resultados').append(usu);
+ 	$('#resultados').text("");
 
  	var estado = $('#estado').val();
  	var tipo = $('#TIPO').val();
