@@ -29,13 +29,6 @@
       "id": 8
     },
     {
-      "nombre": "luciano ",
-      "apellido": "capraro",
-      "tipo": "gimnasio",
-      "estado": "activo",
-      "id": 9
-    },
-    {
       "nombre": "lucas",
       "apellido": "lucero",
       "tipo": "gimnasio",
@@ -50,25 +43,11 @@
       "id": 12
     },
     {
-      "nombre": "santiago",
-      "apellido": "gonzales",
-      "tipo": "Crossfit",
-      "estado": "activo",
-      "id": 13
-    },
-    {
       "nombre": "agustin",
       "apellido": "albiero",
       "tipo": "Spining",
       "estado": "activo",
       "id": 14
-    },
-    {
-      "nombre": "javier",
-      "apellido": "caraballo",
-      "tipo": "Spining",
-      "estado": "activo",
-      "id": 15
     }
   ],
   "historial": [

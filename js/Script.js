@@ -63,13 +63,13 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
 
 
     if ( (estado == est || estado =="vacio") && (tipo == ti || tipo =="vacio")&& (nombre == nomb || nombre == "vacio")) {
-      usu += '<div class="col-md-3 animate-box fadeInUp animated-fast">';
+      usu += '<div class="col-md-3 animate-box fadeInUp animated-fast" id=div'+value.id+'>';
    		usu += '<p> Nombre: ' +value.nombre+ '</p>';
       usu += '<p> Apellido: ' +value.apellido+ '</p>';
    		usu += '<p> Tipo: ' +value.tipo+'</p>';
       	usu += '<p> Estado: ' +value.estado+'</p>';
 
-      usu += '<button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')" value="Eliminar">Eliminar</button>';
+      usu += '<button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')"  value="Eliminar">Eliminar</button>';
       usu +=  '<button class="compartir" onclick="compartir('+value.id+')">Compartir</button>';
    		usu += '</div>';
         /*
@@ -224,126 +224,11 @@ function borrar(idUsuario){
   $.ajax({
   type: "DELETE",
 dataType: "json",
-url: "http://localhost:3000/usuarios/"+idUsuario
- })
- .done(function(result, textStatus, jqXHR ) {
- alert("Borrado correctamente el usuario:" +idUsuario);
- $("#employee_table").empty();
-$.getJSON("http://localhost:3001/Usuarios",function(data){
-var usu = '';
-console.log(data);
-$('#employee_table').append(usu);
-
-var nivel = $('#nivel').val();
-var tipo = $('#TIPO').val();
-var nombre = $('#nombre').val();
-$.each(data, function(key,value){
-ti = value.tipo;
-niv = value.nivel;
-nomb = value.nombre;
-
-if (nivel == niv && tipo == ti && nombre == nomb ) {
-usu += '<tr>';
-usu += '<td>' +value.tipo+ '</td>';
-usu += '<td>' +value.nombre+ '</td>';
-usu += '<td>' +value.apellido+ '</td>';
-usu += '<td><button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')" value="Eliminar">Eliminar</button></td>';
-usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';
-usu += '</tr>';
-}
-else {
-
-  if (nivel == niv && tipo == ti && nombre == nomb ) {
-    usu += '<tr>';
-     usu += '<td>' +value.tipo+ '</td>';
-     usu += '<td>' +value.nombre+ '</td>';
-     usu += '<td>' +value.apellido+ '</td>';
-usu += '<td><button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')" value="Eliminar">Eliminar</button></td>';
-usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';
-     usu += '</tr>';
-  }
-  else {
-
-        if (nivel == niv && tipo == ti && nombre == "" ) {
-          usu += '<tr>';
-           usu += '<td>' +value.tipo+ '</td>';
-           usu += '<td>' +value.nombre+ '</td>';
-           usu += '<td>' +value.apellido+ '</td>';
-           usu += '<td><button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')" value="Eliminar">Eliminar</button></td>';
-   usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';
-   usu += '</tr>';
-        }
-        else {
-
-              if (nivel == niv && tipo == "0" && nombre == nomb ) {
-                usu += '<tr>';
-                 usu += '<td>' +value.tipo+ '</td>';
-                 usu += '<td>' +value.nombre+ '</td>';
-                 usu += '<td>' +value.apellido+ '</td>';
-                 usu += '<td><button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')" value="Eliminar">Eliminar</button></td>';
-     usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';
-     usu += '</tr>';
-              }
-              else {
-
-                    if (nivel == "0" && tipo == ti && nombre == nomb ) {
-                      usu += '<tr>';
-                       usu += '<td>' +value.tipo+ '</td>';
-                       usu += '<td>' +value.nombre+ '</td>';
-                       usu += '<td>' +value.apellido+ '</td>';
-                       usu += '<td><button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')" value="Eliminar">Eliminar</button></td>';
-         usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';
-         usu += '</tr>';
-                    }
-                    else {
-
-                          if (nivel == niv && tipo == "0" && nombre == "" ) {
-                            usu += '<tr>';
-                             usu += '<td>' +value.tipo+ '</td>';
-                             usu += '<td>' +value.nombre+ '</td>';
-                             usu += '<td>' +value.apellido+ '</td>';
-                             usu += '<td><button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')" value="Eliminar">Eliminar</button></td>';
-           usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';
-           usu += '</tr>';
-                          }
-                          else {
-
-                                if (nivel == "0" && tipo == ti && nombre == "" ) {
-                                  usu += '<tr>';
-                                   usu += '<td>' +value.tipo+ '</td>';
-                                   usu += '<td>' +value.nombre+ '</td>';
-                                   usu += '<td>' +value.apellido+ '</td>';
-                                   usu += '<td><button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')" value="Eliminar">Eliminar</button></td>';
-               usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';
-               usu += '</tr>';
-                                }
-                                else {
-
-                                      if (nivel == "0" && tipo == "0" && nombre == nomb ) {
-                                        usu += '<tr>';
-                                         usu += '<td>' +value.tipo+ '</td>';
-                                         usu += '<td>' +value.nombre+ '</td>';
-                                         usu += '<td>' +value.apellido+ '</td>';
-                                         usu += '<td><button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')" value="Eliminar">Eliminar</button></td>';
-                 usu +=  '<td><button class="compartir " onclick="compartir('+value.id+')">Compartir</button></td>';
-                 usu += '</tr>';
-                                      }
-                                    }}}}}}}})
-if (usu =="") {
-usu += ' <h3> no se encontraron resultados </h3>';
-}
-$('#employee_table').append(usu);
-
-});
-
-
- })
- .fail(function( jqXHR, textStatus, errorThrown ) {
-  alert("Error llamando al servicio: " + textStatus);
- })
-
-}
-
+url: "http://localhost:3000/usuarios/"+idUsuario,
+    success: function( response ) {
+  $('#div'+idUsuario).text("");
+  alert("el usuari fue borrado correctamente")
+}})}
 
 
 $(document).ready(function(){
