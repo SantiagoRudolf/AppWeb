@@ -127,6 +127,48 @@
       "tipo": "Spining",
       "estado": "activo",
       "id": "17"
+    },
+    {
+      "id": "5",
+      "nombre": "Juan Pablo",
+      "apellido": "Pardal",
+      "tipo": "gimnasio",
+      "estado": "activo"
+    },
+    {
+      "nombre": "lucas",
+      "apellido": "lucero",
+      "tipo": "gimnasio",
+      "estado": "activo",
+      "id": "10"
+    },
+    {
+      "nombre": "agustin",
+      "apellido": "albiero",
+      "tipo": "Spining",
+      "estado": "activo",
+      "id": "14"
+    },
+    {
+      "nombre": "prueba1",
+      "apellido": "prueba1",
+      "tipo": "Spining",
+      "estado": "activo",
+      "id": "16"
+    },
+    {
+      "nombre": "juan",
+      "apellido": "rudolf",
+      "tipo": "Spining",
+      "estado": "activo",
+      "id": "18"
+    },
+    {
+      "nombre": "augusto",
+      "apellido": "alvarez",
+      "tipo": "Spining",
+      "estado": "activo",
+      "id": "19"
     }
   ]
 }

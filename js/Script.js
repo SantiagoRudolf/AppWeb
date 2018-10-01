@@ -64,7 +64,7 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
 
 
     if ( (estado == est || estado =="vacio") && (tipo == ti || tipo =="vacio")&& (nombre == nomb || nombre == "vacio") && i <10) {
-      usu += '<div class="col-md-3 animate-box fadeInUp animated-fast" id=div'+value.id+'>';
+      usu += '<div class="col-md-3 animate-box fadeInUp animated-fast busquedaclientes" id=div'+value.id+'>';
    		usu += '<p> Nombre: ' +value.nombre+ '</p>';
       usu += '<p> Apellido: ' +value.apellido+ '</p>';
    		usu += '<p> Tipo: ' +value.tipo+'</p>';
@@ -301,7 +301,7 @@ $(document).ready(function(){
 
 
     if ( (estado == est || estado =="vacio") && (tipo == ti || tipo =="vacio")&& (nombre == nomb || nombre == "vacio") ) {
-      usu += '<div class="col-md-3 animate-box fadeInUp animated-fast" id=div'+value.id+'>';
+      usu += '<div class="col-md-3 animate-box fadeInUp animated-fast busquedaclientes" id=div'+value.id+'>';
        usu += '<p> Nombre: ' +value.nombre+ '</p>';
       usu += '<p> Apellido: ' +value.apellido+ '</p>';
        usu += '<p> Tipo: ' +value.tipo+'</p>';
