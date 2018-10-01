@@ -97,7 +97,9 @@
 				</div>
 			</div>
 		</nav>
-
+<div style="float: right">
+		<a href="#openModal">HISTORIAL</a>
+	</div>
 		<form class="navbar-form navbar-left" role="search"  style=" width: 100%">
 
 				<select class="form-control" id="TIPO" >
@@ -116,7 +118,7 @@
 				</select>
 				<input type="text" class="form-control" placeholder="NOMBRE" id="nombre">
 				<input type="button" class="btn btn-default" value="BUSCAR" id="boton">
-				<a href="#openModal">HISTORIAL</a>
+
 
 		</form>
 
@@ -153,9 +155,9 @@
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center">
 					<form id="nuevoUsuario"  method="post" action="http://localhost:3000/usuarios ">
-<input type="text" class="form-control" name="nombre" placeholder="Nombre" style="margin-bottom:20px">
-<input type="text" class="form-control" name="apellido" placeholder="Apellido" style="margin-bottom:20px">
-<select class="form-control" id="cargartipo" name="tipo" >
+<input type="text" class="form-control" name="nombre" placeholder="Nombre" style="margin-bottom:20px" required>
+<input type="text" class="form-control" name="apellido" placeholder="Apellido" style="margin-bottom:20px" required>
+<select class="form-control" id="cargartipo" name="tipo" required style=" background-color:gray" >
 	<option value="0">Tipo </option>
 	<option value="gimnasio">gimnasio</option>
 	<option value="Boxeo">Boxeo</option>
