@@ -370,6 +370,11 @@ img {
   max-width: 100%;
   height: auto;
 }
+.img-responsiveprofes {
+  display: block;
+  max-width: 70%;
+  height: auto;
+}
 
 .img-rounded {
   border-radius: 6px;
@@ -6253,5 +6258,4 @@ button.close {
     display: none !important;
   }
 }
-
 /*# sourceMappingURL=bootstrap.css.map */

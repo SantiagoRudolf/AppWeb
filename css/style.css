@@ -642,7 +642,7 @@ h1, h2, h3, h4, h5, h6, figure {
   width: 100%;
   position: absolute;
   bottom: 60%;
-  left: 42%;
+  left: 26%;
   -webkit-transform: rotate(270deg);
   -moz-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
@@ -1721,7 +1721,11 @@ h1, h2, h3, h4, h5, h6, figure {
 .row-pb-sm {
   padding-bottom: 2em !important;
 }
-
+.divprofes{
+  text-align: center;
+  align-items: center;
+  width: 135%;
+}
 .fh5co-loader {
   position: fixed;
   left: 0px;
@@ -1740,7 +1744,8 @@ h1, h2, h3, h4, h5, h6, figure {
 
 }
 .navbar-form.navbar-left{
-  margin-left:11%;
+  align-content: center;
+  margin:auto;
 }
 #boton{
   width:15%;
@@ -1775,13 +1780,12 @@ h1, h2, h3, h4, h5, h6, figure {
 	pointer-events: auto;
 }
 .modalDialog > div {
-	width: 60%;
+	width: 90%;
   height: 80%;
   overflow: auto;
 	position: relative;
-  margin-left: 20%;
-  margin-right: 20%;
-  margin-top: 5%;
+  margin:auto;
+  margin-top: 8%;
 	padding: 5px 20px 13px 20px;
 	border-radius: 10px;
 	background: #fff;
@@ -1799,8 +1803,8 @@ h1, h2, h3, h4, h5, h6, figure {
   opacity: unset;
 	position: absolute;
 	text-align: center;
-  margin-left: 80%;
-  margin-top: 5%;
+  margin-left: 94%;
+  margin-top: 4%;
 	width: 24px;
 	text-decoration: none;
 	font-weight: bold;

@@ -181,28 +181,12 @@ $(document).ready(function(){
     usu += '<td>' +value.tipo+ '</td>';
     usu += '<td>' +value.nombre+ '</td>';
     usu += '<td>' +value.apellido+ '</td>';
-     usu+=  '<td><button id="borrar" class="delete btn btn-danger" onclick ="borrarH('+value.id+')"  value="Eliminar">Eliminar</button></td>';
     usu += '</tr>';
   $('#historial').append(usu);
 });
 });
 });
 
-/*
-AGREGA AL HISTORIAL
-data = ',{ "id": ' + value.id + ', "nombre": ' + value.nombre +',"apellido": '+ value.apellido +',"tipo": '+ value.tipo +',"nivel": ' + value.nivel + ' }'
-$.ajax( {
-  url: "http://localhost:3000/historial ",
-  method : 'post', //en este caso
-  dataType : 'json',
-  type: "post",
-  data: data,
-  success: function( response ) {
-    console.log(data);
-  }
-});
-TERIMA DE AGREGAR AL HISTORIAL
-*/
 function compartir(id){
   $.getJSON("http://localhost:3001/Usuarios",function(data){
 event.preventDefault();
