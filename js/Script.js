@@ -95,8 +95,8 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
 
 
 })
-if (i==10){
-  $('#vermas').append('<button class="compartir" onclick="vermas()">ver mas </button>')
+if (i==10 ){
+  $('#vermas').html('<button class="compartir" onclick="vermas()">ver mas </button>')
 
 }
 
@@ -174,7 +174,6 @@ $('#crearrrr').click(function(){
 
 //   HISTORAIAL!!!!!!!!!!!!!!!!!!!!!!!
 $(document).ready(function(){
- $("#historial").empty();
   $.getJSON("http://localhost:3000/historial",function(data){
   $.each(data, function(key,value){
     usu = '';
@@ -182,6 +181,7 @@ $(document).ready(function(){
     usu += '<td>' +value.tipo+ '</td>';
     usu += '<td>' +value.nombre+ '</td>';
     usu += '<td>' +value.apellido+ '</td>';
+     usu+=  '<td><button id="borrar" class="delete btn btn-danger" onclick ="borrarH('+value.id+')"  value="Eliminar">Eliminar</button></td>';
     usu += '</tr>';
   $('#historial').append(usu);
 });
@@ -233,7 +233,16 @@ dataType: "json",
 url: "http://localhost:3000/usuarios/"+idUsuario,
     success: function( response ) {
   $('#div'+idUsuario).text("");
-  alert("el usuari fue borrado correctamente")
+  alert("el usuario fue borrado correctamente")
+}})}
+
+function borrarH(idUsuario){
+  $.ajax({
+  type: "DELETE",
+dataType: "json",
+url: "http://localhost:3000/historial/"+idUsuario,
+    success: function( response ) {
+
 }})}
 
 

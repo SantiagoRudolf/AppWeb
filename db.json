@@ -87,39 +87,11 @@
   ],
   "historial": [
     {
-      "id": 1,
-      "nombre": "Agustin",
-      "apellido": "Lucero",
-      "tipo": "gimnasio",
-      "estado": "activo"
-    },
-    {
-      "id": "5",
-      "nombre": "Juan Pablo",
-      "apellido": "Pardal",
-      "tipo": "gimnasio",
-      "estado": "activo"
-    },
-    {
       "id": "6",
       "nombre": "Jose",
       "apellido": "Cisneros",
       "tipo": "Boxeo",
       "estado": "inactivo"
-    },
-    {
-      "nombre": "agustin",
-      "apellido": "anunciata",
-      "tipo": "gimnasio",
-      "estado": "activo",
-      "id": "19"
-    },
-    {
-      "nombre": "agustin",
-      "apellido": "anunciata",
-      "tipo": "Boxeo",
-      "estado": "activo",
-      "id": "20"
     },
     {
       "nombre": "agustin",
@@ -136,41 +108,6 @@
       "id": "8"
     },
     {
-      "nombre": "luciano ",
-      "apellido": "capraro",
-      "tipo": "gimnasio",
-      "estado": "activo",
-      "id": "9"
-    },
-    {
-      "nombre": "lucas",
-      "apellido": "lucero",
-      "tipo": "gimnasio",
-      "estado": "activo",
-      "id": "10"
-    },
-    {
-      "nombre": "jorge ",
-      "apellido": "lucero",
-      "tipo": "gimnasio",
-      "estado": "activo",
-      "id": "11"
-    },
-    {
-      "nombre": "santiago",
-      "apellido": "gonzales",
-      "tipo": "Crossfit",
-      "estado": "activo",
-      "id": "13"
-    },
-    {
-      "nombre": "agustin",
-      "apellido": "albiero",
-      "tipo": "Spining",
-      "estado": "activo",
-      "id": "14"
-    },
-    {
       "nombre": "ramiro",
       "apellido": "gordon",
       "tipo": "gimnasio",
@@ -178,18 +115,11 @@
       "id": "12"
     },
     {
-      "nombre": "javier",
-      "apellido": "caraballo",
+      "nombre": "augusto",
+      "apellido": "prueba",
       "tipo": "Spining",
       "estado": "activo",
       "id": "15"
-    },
-    {
-      "nombre": "prueba1",
-      "apellido": "prueba1",
-      "tipo": "Spining",
-      "estado": "activo",
-      "id": "16"
     },
     {
       "nombre": "diego",
@@ -197,13 +127,6 @@
       "tipo": "Spining",
       "estado": "activo",
       "id": "17"
-    },
-    {
-      "nombre": "juan",
-      "apellido": "rudolf",
-      "tipo": "Spining",
-      "estado": "activo",
-      "id": "18"
     }
   ]
 }
