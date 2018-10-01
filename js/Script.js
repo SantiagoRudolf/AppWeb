@@ -329,3 +329,19 @@ $('#resultados').append(usu);
  });
 
  }
+
+
+function borrarTodo(){
+  $.getJSON("http://localhost:3000/historial",function(data){
+  $.each(data, function(key,value){
+  $.ajax({
+  type: "DELETE",
+dataType: "json",
+url: "http://localhost:3000/historial/"+value.id,
+    success: function( response ) {
+
+
+}})})})
+  alert ("historial borrado correctamente");
+
+}
