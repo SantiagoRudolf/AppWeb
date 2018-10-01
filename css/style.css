@@ -1735,6 +1735,10 @@ h1, h2, h3, h4, h5, h6, figure {
 .js .animate-box {
   opacity: 0;
 }
+
+.col-md-3 { border:solid;
+  margin: 2px;
+}
 .navbar-form.navbar-left{
   margin-left:11%;
 }
@@ -1807,5 +1811,12 @@ h1, h2, h3, h4, h5, h6, figure {
 	-webkit-box-shadow: 1px 1px 3px #000;
 	box-shadow: 1px 1px 3px #000;
 }
+.compartir{
+  background: green;
+  color: #fff;
+  border: 2px solid green ;
+  border-radius: 30px;
+  padding: 5px 15px;
 
+}
 /*# sourceMappingURL=style.css.map */

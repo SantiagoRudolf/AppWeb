@@ -4,7 +4,7 @@ $font-primary: 'Work Sans', Arial, sans-serif;
 
 
 // Overrides
-$grid-gutter-width: 40px !default; 
+$grid-gutter-width: 40px !default;
 $border-radius-base:  4px !default;
 $padding-base-vertical: 14px !default;
 
@@ -54,16 +54,16 @@ $form-group-margin-bottom:       30px !default;
           border-radius: $radius;
 }
 @mixin flex() {
-	display: -webkit-box;      
-  	display: -moz-box;         
-  	display: -ms-flexbox;      
-  	display: -webkit-flex;     
-  	display: flex;             
+	display: -webkit-box;
+  	display: -moz-box;
+  	display: -ms-flexbox;
+  	display: -webkit-flex;
+  	display: flex;
 }
 @mixin flexwrap() {
 	flex-wrap: wrap;
-	-webkit-flex-wrap: wrap; 
-	-moz-flex-wrap: wrap; 
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
 }
 
 @font-face {
@@ -78,7 +78,7 @@ $form-group-margin-bottom:       30px !default;
 }
 
 @mixin icomoon() {
-	
+
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -90,10 +90,10 @@ $form-group-margin-bottom:       30px !default;
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	
+
 }
 
-// Import 
+// Import
 @import 'bootstrap/mixins';
 @import 'bootstrap/variables';
 
@@ -102,7 +102,7 @@ $form-group-margin-bottom:       30px !default;
 
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *
 * ======================================================= */
 
@@ -121,9 +121,9 @@ body {
 	height: 100%;
 	@include transition(.5s);
 	.offcanvas & {
-		overflow: hidden;	
+		overflow: hidden;
 		position: absolute;
-		
+
 		&:after {
 			@include transition(2s);
 			position: absolute;
@@ -281,7 +281,7 @@ h1, h2, h3, h4, h5, h6, figure {
 						border-width: 8px;
 						margin-left: -8px;
 					}
-					
+
 					li {
 						display: block;
 						margin-bottom: 7px;
@@ -383,12 +383,12 @@ h1, h2, h3, h4, h5, h6, figure {
 		display: table;
 		text-align: center;
 		background: $brand-white;
-		
+
 		-webkit-box-shadow: 0px 14px 30px -15px rgba(0,0,0,0.75);
 		-moz-box-shadow: 0px 14px 30px -15px rgba(0,0,0,0.75);
 		box-shadow: 0px 14px 30px -15px rgba(0,0,0,0.75);
 		@include border-radius(50%);
-		
+
 		i {
 			text-align: center;
 			display: table-cell;
@@ -408,7 +408,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	}
 	&:hover {
 		.overlay {
-			background: rgba(0, 0, 0, .7);		
+			background: rgba(0, 0, 0, .7);
 		}
 		a {
 			// position: relative;
@@ -417,7 +417,7 @@ h1, h2, h3, h4, h5, h6, figure {
 			-ms-transform: scale(1.2);
 			-o-transform: scale(1.2);
 			transform: scale(1.2);
-			
+
 		}
 	}
 }
@@ -456,7 +456,7 @@ h1, h2, h3, h4, h5, h6, figure {
 		@media screen and (max-width: $screen-sm) {
 			height: 400px;
 		}
-	}	
+	}
 
 	&.fh5co-cover-sm {
 		height: 600px;
@@ -471,7 +471,7 @@ h1, h2, h3, h4, h5, h6, figure {
 			@media screen and (max-width: $screen-sm) {
 				height: 400px;
 			}
-		}	
+		}
 	}
 }
 
@@ -514,7 +514,7 @@ h1, h2, h3, h4, h5, h6, figure {
 			}
 			&.address {
 				&:before {
-					font-size: 30px;	
+					font-size: 30px;
 					content: "\e9d1";
 				}
 			}
@@ -635,10 +635,10 @@ h1, h2, h3, h4, h5, h6, figure {
 	box-shadow: 0px 10px 23px -10px rgba(0,0,0,0.43);
 
 	@media screen and (max-width: $screen-md){
-		margin-top: 0;	
+		margin-top: 0;
 		margin-bottom: 10px;
 	}
-	
+
 	@media screen and (max-width: $screen-sm){
 		margin-top: 0;
 		margin-bottom: 20px;
@@ -676,7 +676,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 .trainer{
 	position: relative;
-	background: rgba($brand-black,.05);	
+	background: rgba($brand-black,.05);
 	@media screen and (max-width: $screen-sm){
 		margin-bottom: 30px;
 	}
@@ -876,7 +876,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	@include border-radius(5px);
 	margin-bottom: 40px;
 	position: relative;
-	
+
 
 	&.popular{
 		.btn-select-plan{
@@ -902,7 +902,7 @@ h1, h2, h3, h4, h5, h6, figure {
     		margin: 0;
     		font-size: 16px;
     		padding: 8px 10px;
-    		
+
     		&.color{
     			background: rgba($brand-black,.04);
     		}
@@ -985,15 +985,15 @@ h1, h2, h3, h4, h5, h6, figure {
 				z-index: 80;
 				@include transition(.5s);
 
-				background: rgba(0, 0, 0, .0);	
+				background: rgba(0, 0, 0, .0);
 
 			}
 			&:hover {
 				&:before {
-					background: rgba(0, 0, 0, .5);	
+					background: rgba(0, 0, 0, .5);
 				}
 			}
-			
+
 			.case-studies-summary {
 			   width: auto;
 			   bottom: 2em;
@@ -1025,30 +1025,30 @@ h1, h2, h3, h4, h5, h6, figure {
 		&.two-third {
 			width: 48.6%;
 			@media screen and (max-width: $screen-sm) {
-				width: 49%;	
+				width: 49%;
 			}
 			@media screen and (max-width: $screen-xs) {
-				width: 100%;	
+				width: 100%;
 			}
-		}	
+		}
 		&.one-third {
 			width: 23.8%;
 			@media screen and (max-width: $screen-sm) {
-				width: 49%;	
+				width: 49%;
 			}
 			@media screen and (max-width: $screen-xs) {
-				width: 100%;	
+				width: 100%;
 			}
 		}
 		&.one-half {
 			width: 49%;
 			@media screen and (max-width: $screen-xs) {
-				width: 100%;	
+				width: 100%;
 			}
 		}
-		
+
 	}
-	
+
 }
 
 
@@ -1103,7 +1103,7 @@ h1, h2, h3, h4, h5, h6, figure {
 		figure{
 			margin-bottom: 10px;
 			@include inline-block;
-			
+
 			img {
 				width: 100px;
 				@include border-radius(50%);
@@ -1119,7 +1119,7 @@ h1, h2, h3, h4, h5, h6, figure {
 			@media screen and (max-width: $screen-md) {
 				width: 100%;
 			}
-			
+
 		}
 
 	}
@@ -1152,7 +1152,7 @@ h1, h2, h3, h4, h5, h6, figure {
 		bottom: 0;
 		background: rgba(0, 0, 0, .5);
 		@include transition(.5s);
-	}	
+	}
 	h2{
 		text-transform: uppercase;
 		color: $brand-white;
@@ -1184,15 +1184,15 @@ h1, h2, h3, h4, h5, h6, figure {
 		}
 
 		&:-moz-placeholder { /* Firefox 18- */
-		   color: $brand-white;  
+		   color: $brand-white;
 		}
 
 		&::-moz-placeholder {  /* Firefox 19+ */
-		   color: $brand-white;  
+		   color: $brand-white;
 		}
 
-		&:-ms-input-placeholder {  
-		   color: $brand-white;  
+		&:-ms-input-placeholder {
+		   color: $brand-white;
 		}
 		@include transition(.5s);
 		&:focus {
@@ -1227,7 +1227,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	margin-bottom: 60px;
 	a{
 		img{
-	
+
 			width: 100%;
 
 			&:hover{
@@ -1239,7 +1239,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	@media screen and (max-width: $screen-sm) {
 		width: 100%;
 	}
-	
+
 
 	.blog-text {
 		margin-bottom: 30px;
@@ -1480,7 +1480,7 @@ h1, h2, h3, h4, h5, h6, figure {
 			text-decoration: none;
 			outline: none;
 		}
-	}	
+	}
 }
 
 
@@ -1759,8 +1759,16 @@ h1, h2, h3, h4, h5, h6, figure {
 	background: url(../images/loader.gif) center no-repeat #fff;
 }
 
-.animate-box {
+.animate-box { border: solid ;
 	.js & {
 		opacity: 0;
+
 	}
+}
+
+
+.compartir  {
+	background:green ;
+	border: 2px solid  important;
+
 }

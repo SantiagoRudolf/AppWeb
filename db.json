@@ -13,6 +13,69 @@
       "apellido": "Cisneros",
       "tipo": "Boxeo",
       "estado": "inactivo"
+    },
+    {
+      "nombre": "agustin",
+      "apellido": "lucero",
+      "tipo": "Spining",
+      "estado": "activo",
+      "id": 7
+    },
+    {
+      "nombre": "santiago",
+      "apellido": "rudolf",
+      "tipo": "Crossfit",
+      "estado": "activo",
+      "id": 8
+    },
+    {
+      "nombre": "luciano ",
+      "apellido": "capraro",
+      "tipo": "gimnasio",
+      "estado": "activo",
+      "id": 9
+    },
+    {
+      "nombre": "lucas",
+      "apellido": "lucero",
+      "tipo": "gimnasio",
+      "estado": "activo",
+      "id": 10
+    },
+    {
+      "nombre": "jorge ",
+      "apellido": "lucero",
+      "tipo": "gimnasio",
+      "estado": "activo",
+      "id": 11
+    },
+    {
+      "nombre": "ramiro",
+      "apellido": "gordon",
+      "tipo": "gimnasio",
+      "estado": "activo",
+      "id": 12
+    },
+    {
+      "nombre": "santiago",
+      "apellido": "gonzales",
+      "tipo": "Crossfit",
+      "estado": "activo",
+      "id": 13
+    },
+    {
+      "nombre": "agustin",
+      "apellido": "albiero",
+      "tipo": "Spining",
+      "estado": "activo",
+      "id": 14
+    },
+    {
+      "nombre": "javier",
+      "apellido": "caraballo",
+      "tipo": "Spining",
+      "estado": "activo",
+      "id": 15
     }
   ],
   "historial": [
@@ -50,6 +113,69 @@
       "tipo": "Boxeo",
       "estado": "activo",
       "id": "20"
+    },
+    {
+      "nombre": "agustin",
+      "apellido": "lucero",
+      "tipo": "Spining",
+      "estado": "activo",
+      "id": "7"
+    },
+    {
+      "nombre": "santiago",
+      "apellido": "rudolf",
+      "tipo": "Crossfit",
+      "estado": "activo",
+      "id": "8"
+    },
+    {
+      "nombre": "luciano ",
+      "apellido": "capraro",
+      "tipo": "gimnasio",
+      "estado": "activo",
+      "id": "9"
+    },
+    {
+      "nombre": "lucas",
+      "apellido": "lucero",
+      "tipo": "gimnasio",
+      "estado": "activo",
+      "id": "10"
+    },
+    {
+      "nombre": "jorge ",
+      "apellido": "lucero",
+      "tipo": "gimnasio",
+      "estado": "activo",
+      "id": "11"
+    },
+    {
+      "nombre": "santiago",
+      "apellido": "gonzales",
+      "tipo": "Crossfit",
+      "estado": "activo",
+      "id": "13"
+    },
+    {
+      "nombre": "agustin",
+      "apellido": "albiero",
+      "tipo": "Spining",
+      "estado": "activo",
+      "id": "14"
+    },
+    {
+      "nombre": "ramiro",
+      "apellido": "gordon",
+      "tipo": "gimnasio",
+      "estado": "activo",
+      "id": "12"
+    },
+    {
+      "nombre": "javier",
+      "apellido": "caraballo",
+      "tipo": "Spining",
+      "estado": "activo",
+      "id": "15"
     }
   ]
 }
