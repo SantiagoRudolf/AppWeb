@@ -521,3 +521,35 @@ $('#employee_table').append(usu);
 
 }
 
+
+//Buscar rutina
+$(document).ready(function(){
+  $('#botonRutina').click(function(){
+    $('#rutinas_table').empty();
+    $.getJSON("http://localhost:3001/blog",function(data){
+      var rut = '';
+      console.log(data);
+      $('#rutinas_table').append(rut);
+
+      var nivel = $('#Nivel').val();
+      var tipo = $('#TIPO').val();
+      var nombre = $('#Nombre').val();
+
+      $.each(data, function(key,value){
+        niv = value.nivel;
+        ti = value.tipo;
+        nomb = value.nombre;
+        
+        if (nivel == niv && tipo == ti && nombre == nomb ) {
+          rut += '<tr>';
+          rut += '<td>' +value.tipo+ '</td>';
+          rut += '<td>' +value.nombre+ '</td>';
+          rut += '<td>' +value.descripcion+ '</td>';
+          rut += '<td><button id="borrarRutina" class="delete btn btn-danger" onclick ="" value="Eliminar">Eliminar</button></td>';
+          rut += '<td><button class="compartir " onclick="">Compartir</button></td>';
+          rut += '</tr>';
+        }
+      })
+    })
+  })
+});

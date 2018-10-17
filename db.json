@@ -68,5 +68,19 @@
       "tipo": "gimnasio",
       "nivel": "tres"
     }
+  ],
+  "rutinas": [
+    {
+      "id": "1",
+      "descripcion": "Descripcion de la rutina 1",
+      "tipo": "gimnasio",
+      "nivel": "tres"
+    },
+    {
+      "id": "2",
+      "descripcion": "Descripcion de la rutina 2",
+      "tipo": "Boxeo",
+      "nivel": "dos"
+    }
   ]
 }
