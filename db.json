@@ -36,13 +36,6 @@
       "id": 10
     },
     {
-      "nombre": "ramiro",
-      "apellido": "gordon",
-      "tipo": "gimnasio",
-      "estado": "activo",
-      "id": 12
-    },
-    {
       "nombre": "agustin",
       "apellido": "albiero",
       "tipo": "Spining",
@@ -169,6 +162,36 @@
       "tipo": "Spining",
       "estado": "activo",
       "id": "19"
+    }
+  ],
+  "rutinas": [
+    {
+      "usuario": "Manuel",
+      "descripcion": "chau chau",
+      "tipo": "Spining",
+      "nivel": "cuatro",
+      "id": "24"
+    },
+    {
+      "usuario": "Santiago",
+      "descripcion": "Descripcion de la ratuna de Santiago",
+      "tipo": "Spining",
+      "nivel": "dos",
+      "id": "26"
+    },
+    {
+      "usuario": "Agustin",
+      "descripcion": "Descripcion de la rutina de Agustin",
+      "tipo": "Crossfit",
+      "nivel": "tres",
+      "id": "27"
+    },
+    {
+      "usuario": "Luciano",
+      "descripcion": "Descripcion de la rutina de Luciano",
+      "tipo": "Boxeo",
+      "nivel": "cuatro",
+      "id": "28"
     }
   ]
 }

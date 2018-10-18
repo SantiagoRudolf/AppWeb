@@ -319,7 +319,6 @@ $(document).ready(function(){
 
 
 
-
 if (usu =="") {
   usu += ' <h3> no se encontraron resultados </h3>';
 }
@@ -329,3 +328,89 @@ $('#resultados').append(usu);
  });
 
  }
+
+
+
+//Buscar Rutinas
+ $(document).ready(function(){
+  $('#botonRutina').click(function(){
+    $('#rutinas_table').empty();
+    $.getJSON("http://localhost:3000/rutinas",function(data){
+      console.log(data);
+      var form = $('#formuRutinas');
+      var usuario = $('#NombreUsuario').val();
+      var tipoRutina = $('#TIPO').val();
+      var nivelRutina = $('#Nivel').val();
+      if (usuario == ""){
+        usuario = "nada";
+      }
+      $.each(data, function(key,value){
+        ti = value.tipo;
+        niv = value.nivel;
+        usua = value.usuario;
+        if ( (nivelRutina == niv || nivelRutina == "nada") && (tipoRutina == ti || tipoRutina == "nada")&& (usuario == usua || usuario == "nada")) {
+            ruti = '';
+            ruti += '<tr id=tr'+value.id+'>';
+            ruti += '<td>' +value.tipo+ '</td>';
+            ruti += '<td>' +value.usuario+ '</td>';
+            ruti += '<td>' +value.descripcion+ '</td>';
+            ruti += '<td><button id="borrarRutina" class="delete btn btn-danger" onclick ="borrarRutina('+value.id+')"  value="Eliminar">Eliminar</button></td>';
+            ruti += '</tr>';
+            $('#rutinas_table').append(ruti);
+        }
+      })
+      form[0].reset();
+    });
+  });
+});
+
+//Nueva Rutina
+$(document).ready(function(){
+  $('#crearRutina').click(function(e){
+    e.preventDefault();
+    var form = $('#nuevaRutina');
+    var data = $('#nuevaRutina').serializeArray();
+    $.ajax( {
+      url: "http://localhost:3000/rutinas ",
+      method : 'post', //en este caso
+      dataType : 'json',
+      type: "post",
+      data: data,
+      success: function( response ) {
+        console.log(data);
+        console.log( response );
+        alert("La rutina se ha creado con exito")
+        form[0].reset();
+      }
+    });
+  });
+});
+
+
+
+
+function borrar(idUsuario){
+  $.ajax({
+    type: "DELETE",
+    dataType: "json",
+    url: "http://localhost:3000/usuarios/"+idUsuario,
+    success: function( response ) {
+      $('#div'+idUsuario).text("");
+      alert("el usuario fue borrado correctamente")
+    }
+  })
+}
+//Borrar Rutina
+function borrarRutina(idRutina){
+  if (confirm('¿Estas segurE que deseas eliminar esta rutina?')){
+    $.ajax({
+      type: "DELETE",
+      dataType: "json",
+      url: "http://localhost:3000/rutinas/"+idRutina,
+      success: function( response ) {
+        $('#tr'+idRutina).text("");
+        alert("La rutina fue borrada correctamente");
+      }
+    });
+  }
+}
