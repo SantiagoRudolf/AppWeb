@@ -414,3 +414,32 @@ function borrarRutina(idRutina){
     });
   }
 }
+
+
+
+$(document).ready(function(){
+ $('#iniciar').click(function(e){
+   e.preventDefault();
+    var usuario = $('#usuario').val();
+    var contraseña = $('#contraseña').val();
+    var encontrado = "no";
+
+    $.getJSON("http://localhost:3000/usuarios",function(data){
+    $.each(data, function(key,value){
+         if (usuario == value.nombre){
+           localStorage.setItem("usuarioo",JSON.stringify(value));
+       window.location.replace("index.html");
+       encontrado = "si";
+
+
+           }
+
+         })
+       if(encontrado=="no"){alert("usuario o contraseña incorrecta")}})})})
+
+
+    $(document).ready(function(){
+        var usuario = JSON.parse(localStorage.getItem("usuarioo"));
+        console.log(usuario);
+        $('#bienvenido').html("bienvenido "+ usuario.nombre);
+      })

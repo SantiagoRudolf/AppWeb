@@ -8,13 +8,6 @@
       "estado": "activo"
     },
     {
-      "id": 6,
-      "nombre": "Jose",
-      "apellido": "Cisneros",
-      "tipo": "Boxeo",
-      "estado": "inactivo"
-    },
-    {
       "nombre": "agustin",
       "apellido": "lucero",
       "tipo": "Spining",
