@@ -440,6 +440,39 @@ $(document).ready(function(){
 
     $(document).ready(function(){
         var usuario = JSON.parse(localStorage.getItem("usuarioo"));
+        ruti = "";
         console.log(usuario);
         $('#bienvenido').html("bienvenido "+ usuario.nombre);
-      })
+        if(usuario.nombre != "admin"){
+
+          $('#nuevaRutina').css("display","none");
+          $('#formuRutinas').css("display","none");
+          $('#tablaAdmin').css("display","none");
+          $('#tablaUsuario').css("display","block");
+          $('.admin').css("display","none");
+
+            $.getJSON("http://localhost:3000/rutinas",function(data){
+                $.each(data, function(key,value){
+                  if(value.usuario == usuario.nombre){
+                    console.log("aveer");
+                    ruti += '<tr id=tr'+value.id+'>';
+                    ruti += '<td>' +value.tipo+ '</td>';
+                    ruti += '<td>' +value.descripcion+ '</td>';
+                        ruti += '</tr>';
+
+
+                  }})
+                      $('#rutinas_table_U').append(ruti);})}})
+
+
+
+$(document).ready(function(){
+    var usuarios= [""];
+
+    $.getJSON("http://localhost:3000/rutinas",function(data){
+      console.log("esta andando");
+        $.each(data, function(key,value){
+          console.log(value.usuario);
+          usuarios.push(value.usuario);
+       console.log(usuarios);
+});})})

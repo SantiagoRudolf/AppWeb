@@ -47,17 +47,11 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-
-
 	<script language="JavaScript" type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
-
 	<script language="JavaScript" type="text/javascript" src="http://malsup.github.com/jquery.form.js"></script>
-
-
-
-
+	<link rel="stylesheet" href="css/autocomplete.css" type="text/css">
+	<script src="js/autocomplete.js"></script>
 	<script src ="js/Script.js"> </script>
-
 
 	</head>
 		<body>
@@ -116,14 +110,8 @@
 					<option value="Crossfit">Crossfit</option>
 				</select>
 
-				<select class="form-control"  id="Nivel" >
-					<option value="nada">seleccione el nivel </option>
-					<option value="uno">NIVEL 1</option>
-					<option value="dos">NIVEL 2</option>
-					<option value="tres">NiVEL 3</option>
-					<option value="cuatro">NIVEL 4</option>
-				</select>
 
+        <input type="text" class="form-control" placeholder="apellido" id="apellidoUsuario">
 				<input type="text" class="form-control" placeholder="NOMBRE" id="NombreUsuario">
 				<input type="button" class="btn btn-default" value="buscar" id="botonRutina">
 			</div>
@@ -136,59 +124,20 @@
 			<div id="Rutinas"></div>
 		</div>
 	</div>
-	<table class="table table-bordered table-striped" id="tablaAdmin" >
+	<table class="table table-bordered table-striped"  >
 		<tr>
 			<th>Tipo</th>
 			<th>Nombre</th>
-			<th>Descripcion</th>
-			<th>Eliminar</th>
+			<th>vencimiento</th>
+			<th>editar</th>
 		</tr>
 		<tbody id="rutinas_table"> </tbody>
 	</table>
 
 
-	<table class="table table-bordered table-striped" id="tablaUsuario" style="display:none ; width:100%" >
-		<tr>
-			<th>Tipo</th>
-			<th>Descripcion</th>
-		</tr>
-		<tbody id="rutinas_table_U"> </tbody>
-	</table>
 
 
-	<div id="fh5co-started" class="fh5co-bg" style="background-image: url(images/img_bg_3.jpg);">
-		<div class="overlay">
-			<h2 style="text-align:center"> Crear una nueva Rutina </h2>
-		</div>
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center">
-					<form id="nuevaRutina"  method="post" action="http://localhost:3000/rutinas">
-						<input type="text" class="form-control" name="usuario" placeholder="Usuario" style="margin-bottom:20px" required id="usuarioRutina">
-						<input type="text" class="form-control" name="descripcion" placeholder="Descripcion de la rutina" style="margin-bottom:20px" required>
-						<select class="form-control" id="TIPO" name="tipo" required style=" background-color:gray" >
-							<option value="0">seleccione el tipo </option>
-							<option value="gimnasio">gimnasio</option>
-							<option value="Boxeo">Boxeo</option>
-							<option value="Spining">Spining</option>
-							<option value="Crossfit">Crossfit</option>
-						</select>
-						<br>
-						<select class="form-control"  id="Nivel" name="nivel" required style=" background-color:gray" >
-							<option value="0">seleccione el nivel </option>
-							<option value="uno">NIVEL 1</option>
-							<option value="dos">NIVEL 2</option>
-							<option value="tres">NiVEL 3</option>
-							<option value="cuatro">NIVEL 4</option>
-						</select>
-						<br>
-						<button type="submit" class="btn btn-default" id="crearRutina"> CREAR</button>
-						<button type="submit" class="btn btn-default"> CANCELAR</button>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
+
 
 
 	<footer id="fh5co-footer" class="fh5co-bg" style="background-image: url(images/img_bg_1.jpg);" role="contentinfo">

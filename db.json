@@ -22,13 +22,6 @@
       "id": 8
     },
     {
-      "nombre": "lucas",
-      "apellido": "lucero",
-      "tipo": "gimnasio",
-      "estado": "activo",
-      "id": 10
-    },
-    {
       "nombre": "agustin",
       "apellido": "albiero",
       "tipo": "Spining",
@@ -41,13 +34,6 @@
       "tipo": "Spining",
       "estado": "activo",
       "id": 15
-    },
-    {
-      "nombre": "prueba1",
-      "apellido": "prueba1",
-      "tipo": "Spining",
-      "estado": "activo",
-      "id": 16
     },
     {
       "nombre": "diego",
@@ -69,6 +55,13 @@
       "tipo": "Spining",
       "estado": "activo",
       "id": 19
+    },
+    {
+      "nombre": "admin",
+      "apellido": "",
+      "tipo": "0",
+      "estado": "activo",
+      "id": 20
     }
   ],
   "historial": [
@@ -155,6 +148,13 @@
       "tipo": "Spining",
       "estado": "activo",
       "id": "19"
+    },
+    {
+      "nombre": "admin",
+      "apellido": "",
+      "tipo": "0",
+      "estado": "activo",
+      "id": "20"
     }
   ],
   "rutinas": [
@@ -199,6 +199,13 @@
       "tipo": "0",
       "nivel": "0",
       "id": "2N6ScbE"
+    },
+    {
+      "usuario": "santiago",
+      "descripcion": "hola santiago",
+      "tipo": "Boxeo",
+      "nivel": "uno",
+      "id": "r9teMhm"
     }
   ]
 }
