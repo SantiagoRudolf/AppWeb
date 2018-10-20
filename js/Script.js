@@ -441,7 +441,7 @@ $(document).ready(function(){
     $(document).ready(function(){
         var usuario = JSON.parse(localStorage.getItem("usuarioo"));
         ruti = "";
-        console.log(usuario);
+
         $('#bienvenido').html("bienvenido "+ usuario.nombre);
         if(usuario.nombre != "admin"){
 
@@ -454,7 +454,7 @@ $(document).ready(function(){
             $.getJSON("http://localhost:3000/rutinas",function(data){
                 $.each(data, function(key,value){
                   if(value.usuario == usuario.nombre){
-                    console.log("aveer");
+
                     ruti += '<tr id=tr'+value.id+'>';
                     ruti += '<td>' +value.tipo+ '</td>';
                     ruti += '<td>' +value.descripcion+ '</td>';
@@ -466,7 +466,7 @@ $(document).ready(function(){
 
 
 
-$(document).ready(function(){
+/*$(document).ready(function(){
     var usuarios= [""];
 
     $.getJSON("http://localhost:3000/rutinas",function(data){
@@ -475,4 +475,120 @@ $(document).ready(function(){
           console.log(value.usuario);
           usuarios.push(value.usuario);
        console.log(usuarios);
-});})})
+});})})*/
+
+
+
+
+
+$(document).ready(function(){
+$('#botonPagos').click(function(){
+ $("#employee_table").empty();
+$.getJSON("http://localhost:3001/Usuarios",function(data){
+ var usu = '';
+ $('#pagos_table').text("");
+
+ var usuario = $('#formusuario').val();
+ var nombre = $('#NombreUsuario').val();
+ var apellido = $('#apellidoUsuario').val();
+
+
+if( usuario == ""){
+  usuario = "vacio";
+}
+if (nombre == ""){
+  nombre = "vacio";
+}
+if (apellido == ""){
+  apellido = "vacio";
+}
+ $.each(data, function(key,value){
+   u = value.usuario;
+   n = value.nombre;
+   a = value.apellido;
+ console.log("esta andando");
+
+
+   if ( (nombre == n || nombre =="vacio" && n != "admin") && (usuario == u || usuario =="vacio")&& (apellido == a || apellido == "vacio") ) {
+     usu += '<tr>';
+     usu += '<td>' +value.tipo+ '</td>';
+     usu += '<td>' +value.nombre+" "+value.apellido+ '</td>';
+     usu += '<td>' +value.fecha+ '</td>';
+     usu += '<td><button id="agregarMes" class="delete btn btn-danger" onclick ="agregarmes('+value.id+')" >Agregar Mes</button></td>';
+     usu += '<td><button id="agregarMes" class="delete btn btn-danger" onclick ="editar('+value.id+')" >editar</button> </td>';
+     usu += '</tr>';
+
+   }
+
+
+})
+
+$('#pagos_table').append(usu);
+
+
+});
+
+});})
+
+
+
+
+
+//funcion para mostrar la fecha actual
+
+$(document).ready(function(){
+
+var f = new Date();
+$('#fecha').val(f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());
+})
+
+
+
+
+//agrega el pago de un mes
+function agregarmes(id){
+var usuario ="";
+var f ="";
+
+  $.ajax({
+    type: "GET",
+    dataType: "json",
+    url: "http://localhost:3000/usuarios/"+id,
+      success: function(data ) {
+    usuario= data;
+
+     var f = new Date(usuario.fecha);
+
+f.setMonth(f.getMonth() + 1);
+console.log(f);
+f = (  f.getFullYear() +"-"+(f.getMonth() +1)+"-"+f.getDate())
+  if (confirm('¿agregar un mes a '+usuario.nombre+" "+ usuario.apellido+"?")){
+ $.ajax({
+    type: "PATCH",
+    dataType: "string",
+    data: {fecha: f},
+    url: "http://localhost:3000/usuarios/"+id,
+  })
+  recargar();
+}recargar();}})}
+
+  function recargar(){
+    document.getElementById("botonPagos").click();
+  }
+
+
+  function editar(id){
+    var f ="";
+window.location="#Modal";
+$('#botonEditar').click(function(){
+  f = $('#nuevafecha').val();
+  $.ajax({
+     type: "PATCH",
+     dataType: "string",
+     data: {fecha: f},
+     url: "http://localhost:3000/usuarios/"+id,
+   });
+   window.location="#close"
+recargar();
+});;
+ recargar();}

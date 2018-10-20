@@ -1,67 +1,20 @@
 {
   "usuarios": [
     {
-      "id": 5,
-      "nombre": "Juan Pablo",
-      "apellido": "Pardal",
-      "tipo": "gimnasio",
-      "estado": "activo"
-    },
-    {
-      "nombre": "agustin",
-      "apellido": "lucero",
-      "tipo": "Spining",
-      "estado": "activo",
-      "id": 7
-    },
-    {
-      "nombre": "santiago",
-      "apellido": "rudolf",
-      "tipo": "Crossfit",
-      "estado": "activo",
-      "id": 8
-    },
-    {
-      "nombre": "agustin",
-      "apellido": "albiero",
-      "tipo": "Spining",
-      "estado": "activo",
-      "id": 14
-    },
-    {
       "nombre": "augusto",
       "apellido": "prueba",
       "tipo": "Spining",
+      "fecha": "2018-10-17",
       "estado": "activo",
-      "id": 15
-    },
-    {
-      "nombre": "diego",
-      "apellido": "perez",
-      "tipo": "Spining",
-      "estado": "activo",
-      "id": 17
-    },
-    {
-      "nombre": "juan",
-      "apellido": "rudolf",
-      "tipo": "Spining",
-      "estado": "activo",
-      "id": 18
-    },
-    {
-      "nombre": "augusto",
-      "apellido": "alvarez",
-      "tipo": "Spining",
-      "estado": "activo",
-      "id": 19
+      "id": 1
     },
     {
       "nombre": "admin",
-      "apellido": "",
-      "tipo": "0",
+      "apellido": "admin",
+      "tipo": "Spining",
+      "fecha": "2021-4-20",
       "estado": "activo",
-      "id": 20
+      "id": 1
     }
   ],
   "historial": [
@@ -155,6 +108,88 @@
       "tipo": "0",
       "estado": "activo",
       "id": "20"
+    },
+    {
+      "nombre": "augusto",
+      "apellido": "pruebba",
+      "tipo": "gimnasio",
+      "fecha": "20-10-2018",
+      "estado": "activo",
+      "id": "21"
+    },
+    {
+      "nombre": "augusto",
+      "apellido": "prueba",
+      "tipo": "Spining",
+      "fecha": "20-10-2018",
+      "estado": "activo",
+      "id": "22",
+      "<tr><td>0</td><td>admin</td><td></td></tr>": "",
+      "\"\"": ""
+    },
+    {
+      "nombre": "augusto",
+      "apellido": "prueba",
+      "tipo": "gimnasio",
+      "fecha": "20-10-2018",
+      "estado": "activo",
+      "id": "23"
+    },
+    {
+      "nombre": "augusto",
+      "apellido": "roberte",
+      "tipo": "gimnasio",
+      "fecha": "20-10-2018",
+      "estado": "activo",
+      "id": "24"
+    },
+    {
+      "nombre": "augusto",
+      "apellido": "roberte",
+      "tipo": "gimnasio",
+      "fecha": "--",
+      "estado": "activo",
+      "id": "25"
+    },
+    {
+      "nombre": "augusto",
+      "apellido": "roberte",
+      "tipo": "Boxeo",
+      "fecha": "--",
+      "estado": "activo",
+      "id": "26"
+    },
+    {
+      "nombre": "adasd",
+      "apellido": "asdas",
+      "tipo": "Spining",
+      "fecha": "--",
+      "estado": "activo",
+      "id": "27"
+    },
+    {
+      "nombre": "augusto",
+      "apellido": "prueba",
+      "tipo": "gimnasio",
+      "fecha": "",
+      "estado": "activo",
+      "id": "1"
+    },
+    {
+      "nombre": "augusto",
+      "apellido": "prueba",
+      "tipo": "Spining",
+      "fecha": "",
+      "estado": "activo",
+      "id": "2"
+    },
+    {
+      "nombre": "",
+      "apellido": "",
+      "tipo": "0",
+      "fecha": "",
+      "estado": "activo",
+      "id": "3"
     }
   ],
   "rutinas": [

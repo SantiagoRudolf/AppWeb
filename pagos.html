@@ -102,18 +102,12 @@
 
 		<form class="navbar-form navbar-left" role="search" id="formuRutinas">
 
-				<select class="form-control" id="TIPO" >
-					<option value="nada">seleccione el tipo </option>
-					<option value="gimnacio">gimnacio</option>
-					<option value="Boxeo">Boxeo</option>
-					<option value="Spining">Spining</option>
-					<option value="Crossfit">Crossfit</option>
-				</select>
 
 
+          <input type="text" class="form-control" placeholder="usuario" id="formusuario">
         <input type="text" class="form-control" placeholder="apellido" id="apellidoUsuario">
 				<input type="text" class="form-control" placeholder="NOMBRE" id="NombreUsuario">
-				<input type="button" class="btn btn-default" value="buscar" id="botonRutina">
+				<input type="button" class="btn btn-default" value="buscar" id="botonPagos">
 			</div>
 		</form>
 	</div><!-- /.navbar-collapse -->
@@ -129,11 +123,24 @@
 			<th>Tipo</th>
 			<th>Nombre</th>
 			<th>vencimiento</th>
-			<th>editar</th>
+				<th>agregar pago</th>
+				<th> editar </th>
 		</tr>
-		<tbody id="rutinas_table"> </tbody>
+		<tbody id="pagos_table"> </tbody>
 	</table>
 
+
+	<div id="Modal" class="modalDialog">
+		<a href="#close" title="Close" class="close">X</a>
+		<div>
+			<p> Editar pago </p>
+			<h2> ingrese Nueva fecha de vencimiento<h2>
+			<input id="nuevafecha" type="date" name="fecha" class="form-control" >
+			<input type="button" id="botonEditar" value="editar">
+
+
+		</div>
+	</div>
 
 
 
