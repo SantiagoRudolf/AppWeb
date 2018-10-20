@@ -88,10 +88,11 @@
 						<div class="col-xs-10 text-right menu-1">
 							<ul>
 								<li><a href="index.html">Inicio</a></li>
-								<li><a href="about.html">profesores</a></li>
-								<li><a href="pricing.html">Precios</a></li>
+								<li><a href="profesores.html">profesores</a></li>
+								<li><a href="precios.html">Precios</a></li>
 								<li class="active"><a href="rutinas.html">Rutinas</a></li>
 								<li><a href="usuarios.html">Cliente</a></li>
+								<li class="admin"><a href="pagos.html">Pagos</a></li>
 								<li><a href="contact.html">Contacto</a></li>
 							</ul>
 						</div>
@@ -141,6 +142,7 @@
 			<th>Tipo</th>
 			<th>Nombre</th>
 			<th>Descripcion</th>
+			<th>Ejercicios</th>
 			<th>Eliminar</th>
 		</tr>
 		<tbody id="rutinas_table"> </tbody>
@@ -193,6 +195,20 @@
 		</div>
 	</div>
 
+	<div id="ModalEjercicios" class="modalDialog">
+		<a href="#close" title="Close" class="close">X</a>
+		<div>
+				<h2>Ejercicios<h2>
+			<table class="table table-bordered table-striped" id="tablaEjercicios" >
+				<tr>
+					<th>Ejercicio</th>
+					<th>Descripcion</th>
+				</tr>
+				<tbody id="ejercicios_modal"> </tbody>
+			</table>
+
+		</div>
+	</div>
 
 	<footer id="fh5co-footer" class="fh5co-bg" style="background-image: url(images/img_bg_1.jpg);" role="contentinfo">
 		<div class="overlay"></div>
