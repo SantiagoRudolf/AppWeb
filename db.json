@@ -159,94 +159,23 @@
   ],
   "rutinas": [
     {
-      "usuario": "Manuel",
-      "descripcion": "chau chau",
+      "usuario": "Ramiro",
       "tipo": "Spining",
-      "nivel": "cuatro",
-      "id": "24"
-    },
-    {
-      "usuario": "Santiago",
-      "descripcion": "Descripcion de la ratuna de Santiago",
-      "tipo": "Spining",
+      "ejercicios[]": "abs 30",
       "nivel": "dos",
-      "id": "26"
+      "descripcionRutina": "jajajja",
+      "id": "GWvbphQ"
     },
     {
-      "usuario": "Agustin",
-      "descripcion": "Descripcion de la rutina de Agustin",
+      "usuario": "mariano",
       "tipo": "Crossfit",
-      "nivel": "tres",
-      "id": "27"
-    },
-    {
-      "usuario": "Luciano",
-      "descripcion": "Descripcion de la rutina de Luciano",
-      "tipo": "Boxeo",
-      "nivel": "cuatro",
-      "id": "28"
-    },
-    {
-      "usuario": "",
-      "descripcion": "x<x",
-      "tipo": "0",
-      "nivel": "0",
-      "id": "czfUXZZ"
-    },
-    {
-      "usuario": "",
-      "descripcion": "x<x",
-      "tipo": "0",
-      "nivel": "0",
-      "id": "2N6ScbE"
-    },
-    {
-      "usuario": "santiago",
-      "descripcion": "hola santiago",
-      "tipo": "Boxeo",
-      "nivel": "uno",
-      "id": "r9teMhm"
-    },
-    {
-      "usuario": "rami",
-      "descripcion": [
-        "asdf",
-        "asdf"
-      ],
-      "tipo": "Boxeo",
-      "ejercicio": "asdf",
-      "nivel": "dos",
-      "id": "HEgWXgo"
-    },
-    {
-      "usuario": "rami",
-      "tipo": "Boxeo",
-      "ejercicio": [
-        "asdf",
-        "asdf"
-      ],
-      "nivel": "dos",
-      "id": "DrEu8~g"
-    },
-    {
-      "usuario": "rami",
-      "tipo": "Boxeo",
-      "ejercicio": [
-        "asdfasdf",
-        "asdf"
-      ],
-      "nivel": "dos",
-      "id": "edAslsS"
-    },
-    {
-      "usuario": "ramio",
-      "tipo": "nada",
       "ejercicios[]": [
-        "asdf asdf",
-        "asdf asdf"
+        "abs 30",
+        "arbq4b 30x12"
       ],
-      "nivel": "nada",
-      "id": "_R3j_Fe"
+      "nivel": "uno",
+      "descripcionRutina": "nose que poner",
+      "id": "MI7JAWm"
     }
   ]
 }

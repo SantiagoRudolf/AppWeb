@@ -353,7 +353,7 @@ $('#resultados').append(usu);
             ruti += '<tr id=tr'+value.id+'>';
             ruti += '<td>' +value.tipo+ '</td>';
             ruti += '<td>' +value.usuario+ '</td>';
-            ruti += '<td>' +value.descripcion+ '</td>';
+            ruti += '<td>' +value.descripcionRutina+ '</td>';
             ruti += '<td><button id="borrarRutina" class="delete btn btn-danger" onclick ="borrarRutina('+value.id+')"  value="Eliminar">Eliminar</button></td>';
             ruti += '</tr>';
             $('#rutinas_table').append(ruti);
@@ -390,11 +390,15 @@ $(document).ready(function(){
     var form = $('#nuevaRutina');
     //var data = $('#nuevaRutina').serializeArray();
     console.log(lista);
+    //$('select[id=ejemplo2]').val()
+    var tip=$('').val();
+    console.log(tip);
     var data = {
         "usuario" : $('#usuarioRutina').val(),
-        "tipo" : $('#TIPO').val(),
+        "tipo" : $('#tipoRutina').val(),
         "ejercicios" : lista,
-        "nivel" : $('#Nivel').val()
+        "nivel" : $('#nivelRutina').val(),
+        "descripcionRutina" : $('#descRutina').val()
     }
     $.ajax( {
       url: "http://localhost:3000/rutinas ",
@@ -409,6 +413,7 @@ $(document).ready(function(){
         form[0].reset();
       }
     });
+    lista = [];
   });
 });
 
