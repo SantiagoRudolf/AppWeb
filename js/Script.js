@@ -364,12 +364,38 @@ $('#resultados').append(usu);
   });
 });
 
+var lista = []
+//agregar ejercicio a rutina
+$(document).ready(function(){
+  $('#agregarEjercicio').click(function(){
+    var ejer = $('#ejer').val();
+    var descEjer = $('#descripcionEjer').val();
+    if (ejer == "" || descEjer == "") {
+      alert("Debe completar los campos");
+    } else {
+      var ejercicio = ejer+' '+descEjer;
+      lista.push(ejercicio);
+      console.log(lista);
+      $('#ejer').text("");
+      $('#descripcionEjer').text("");
+      alert("El ejercicio se agrego correctamente");
+    }
+  })
+})
+
 //Nueva Rutina
 $(document).ready(function(){
   $('#crearRutina').click(function(e){
     e.preventDefault();
     var form = $('#nuevaRutina');
-    var data = $('#nuevaRutina').serializeArray();
+    //var data = $('#nuevaRutina').serializeArray();
+    console.log(lista);
+    var data = {
+        "usuario" : $('#usuarioRutina').val(),
+        "tipo" : $('#TIPO').val(),
+        "ejercicios" : lista,
+        "nivel" : $('#Nivel').val()
+    }
     $.ajax( {
       url: "http://localhost:3000/rutinas ",
       method : 'post', //en este caso
@@ -387,22 +413,9 @@ $(document).ready(function(){
 });
 
 
-
-
-function borrar(idUsuario){
-  $.ajax({
-    type: "DELETE",
-    dataType: "json",
-    url: "http://localhost:3000/usuarios/"+idUsuario,
-    success: function( response ) {
-      $('#div'+idUsuario).text("");
-      alert("el usuario fue borrado correctamente")
-    }
-  })
-}
 //Borrar Rutina
 function borrarRutina(idRutina){
-  if (confirm('¿Estas segurE que deseas eliminar esta rutina?')){
+  if (confirm('¿Estas seguro que deseas eliminar esta rutina?')){
     $.ajax({
       type: "DELETE",
       dataType: "json",

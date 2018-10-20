@@ -90,7 +90,7 @@
 								<li><a href="index.html">Inicio</a></li>
 								<li><a href="about.html">profesores</a></li>
 								<li><a href="pricing.html">Precios</a></li>
-								<li class="active"><a href="Blog.html">Rutinas</a></li>
+								<li class="active"><a href="rutinas.html">Rutinas</a></li>
 								<li><a href="usuarios.html">Cliente</a></li>
 								<li><a href="contact.html">Contacto</a></li>
 							</ul>
@@ -164,8 +164,7 @@
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center">
 					<form id="nuevaRutina"  method="post" action="http://localhost:3000/rutinas">
-						<input type="text" class="form-control" name="usuario" placeholder="Usuario" style="margin-bottom:20px" required id="usuarioRutina">
-						<input type="text" class="form-control" name="descripcion" placeholder="Descripcion de la rutina" style="margin-bottom:20px" required>
+						<input type="text" id="usuarioRutina" class="form-control" name="usuario" placeholder="Usuario" style="margin-bottom:20px" required id="usuarioRutina">
 						<select class="form-control" id="TIPO" name="tipo" required style=" background-color:gray" >
 							<option value="0">seleccione el tipo </option>
 							<option value="gimnasio">gimnasio</option>
@@ -174,6 +173,12 @@
 							<option value="Crossfit">Crossfit</option>
 						</select>
 						<br>
+						<input id="ejer" type="text" class="form-control" name="ejercicio" placeholder="Ejercicio" style="margin-bottom:20px" required>
+						<input id="descripcionEjer"type="text" class="form-control" name="ejercicio" placeholder="Descripcion de la rutina" style="margin-bottom:20px" required>
+						<button type="button" class="btn btn-default" id="agregarEjercicio">Agregar ejercicio</button>
+
+						
+
 						<select class="form-control"  id="Nivel" name="nivel" required style=" background-color:gray" >
 							<option value="0">seleccione el nivel </option>
 							<option value="uno">NIVEL 1</option>

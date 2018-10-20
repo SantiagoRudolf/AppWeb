@@ -206,6 +206,47 @@
       "tipo": "Boxeo",
       "nivel": "uno",
       "id": "r9teMhm"
+    },
+    {
+      "usuario": "rami",
+      "descripcion": [
+        "asdf",
+        "asdf"
+      ],
+      "tipo": "Boxeo",
+      "ejercicio": "asdf",
+      "nivel": "dos",
+      "id": "HEgWXgo"
+    },
+    {
+      "usuario": "rami",
+      "tipo": "Boxeo",
+      "ejercicio": [
+        "asdf",
+        "asdf"
+      ],
+      "nivel": "dos",
+      "id": "DrEu8~g"
+    },
+    {
+      "usuario": "rami",
+      "tipo": "Boxeo",
+      "ejercicio": [
+        "asdfasdf",
+        "asdf"
+      ],
+      "nivel": "dos",
+      "id": "edAslsS"
+    },
+    {
+      "usuario": "ramio",
+      "tipo": "nada",
+      "ejercicios[]": [
+        "asdf asdf",
+        "asdf asdf"
+      ],
+      "nivel": "nada",
+      "id": "_R3j_Fe"
     }
   ]
 }
