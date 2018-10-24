@@ -331,9 +331,7 @@ $('#resultados').append(usu);
   });
 });
 
-<<<<<<< HEAD
 
-=======
 function verEjercicios(id){
   window.location="#ModalEjercicios";
   $('#ejercicios_modal').empty();
@@ -350,8 +348,6 @@ function verEjercicios(id){
   })
 }
 
-var lista = []
->>>>>>> c82bfa01b5a6fe1f6f398ec9e5dbc2bcf7cdee47
 //agregar ejercicio a rutina
 
 

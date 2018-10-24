@@ -214,25 +214,15 @@
   ],
   "rutinas": [
     {
-<<<<<<< HEAD
-      "usuario": "augusto",
-      "tipo": "gimnasio",
-=======
       "usuario": "mariano",
       "tipo": "Crossfit",
->>>>>>> c82bfa01b5a6fe1f6f398ec9e5dbc2bcf7cdee47
       "ejercicios[]": [
         "pecho plano  8 repeticiones",
         "sentadillas 8 repeticiones"
       ],
       "nivel": "uno",
-<<<<<<< HEAD
-      "descripcionRutina": "musculacion",
-      "id": 1
-=======
       "descripcionRutina": "nose que poner",
       "id": "1"
->>>>>>> c82bfa01b5a6fe1f6f398ec9e5dbc2bcf7cdee47
     }
   ]
 }
