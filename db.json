@@ -4,17 +4,37 @@
       "nombre": "augusto",
       "apellido": "prueba",
       "tipo": "Spining",
-      "fecha": "2018-10-17",
+      "fecha": "2018-10-10",
       "estado": "activo",
       "id": 1
     },
     {
+      "usuario": "admin",
       "nombre": "admin",
       "apellido": "admin",
       "tipo": "Spining",
       "fecha": "2021-4-20",
       "estado": "activo",
+      "contraseña": "admin",
       "id": 1
+    },
+    {
+      "nombre": "agustin",
+      "apellido": "lucero",
+      "tipo": "gimnasio",
+      "fecha": "2018-10-20",
+      "estado": "activo",
+      "id": 2
+    },
+    {
+      "usuario": "agustin11",
+      "nombre": "agustin",
+      "apellido": "Lucero",
+      "tipo": "gimnasio",
+      "fecha": "2018-10-24",
+      "estado": "activo",
+      "contraseña": "123",
+      "id": 3
     }
   ],
   "historial": [
@@ -194,23 +214,15 @@
   ],
   "rutinas": [
     {
-      "usuario": "Ramiro",
-      "tipo": "Spining",
-      "ejercicios[]": "abs 30",
-      "nivel": "dos",
-      "descripcionRutina": "jajajja",
-      "id": "GWvbphQ"
-    },
-    {
-      "usuario": "mariano",
-      "tipo": "Crossfit",
+      "usuario": "augusto",
+      "tipo": "gimnasio",
       "ejercicios[]": [
-        "abs 30",
-        "arbq4b 30x12"
+        "pecho plano  8 repeticiones",
+        "sentadillas 8 repeticiones"
       ],
       "nivel": "uno",
-      "descripcionRutina": "nose que poner",
-      "id": "MI7JAWm"
+      "descripcionRutina": "musculacion",
+      "id": 1
     }
   ]
 }

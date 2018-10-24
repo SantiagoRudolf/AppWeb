@@ -1,38 +1,4 @@
-
-
-var map;
-
- function initialize() {
-   var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996); //ubicación Flor de jardin
-   var myOptions = {
-     zoom: 18,
-     center: punto,
-   }
-     map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
- }
-
-
-
- function pedirPosicion(pos) {
-   var centro = new google.maps.LatLng(pos.coords.latitude,pos.coords.longitude);
-   map.setCenter(centro);
-   map.setMapTypeId(google.maps.MapTypeId.ROADMAP);
-
-}
-
-function geolocalizame(){
-navigator.geolocation.getCurrentPosition(pedirPosicion);
- }
-
- function Negocio(){
-var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
-  map.setCenter(punto);
- }
-
-
-
-
- $(document).ready(function(){
+$(document).ready(function(){
  $('#boton').click(function(){
  	$("#employee_table").empty();
  $.getJSON("http://localhost:3001/Usuarios",function(data){
@@ -63,7 +29,7 @@ var punto = new google.maps.LatLng( -34.906377299999996, -57.925213899999996);
   console.log(nombre);
 
 
-    if ( (estado == est || estado =="vacio") && (tipo == ti || tipo =="vacio")&& (nombre == nomb || nombre == "vacio") && i <10) {
+    if ( (estado == est || estado =="vacio") && (tipo == ti || tipo =="vacio")&& (nombre == nomb || nombre == "vacio" && nomb != "admin") && i <10) {
       usu += '<div class="col-md-3 animate-box fadeInUp animated-fast busquedaclientes" id=div'+value.id+'>';
    		usu += '<p> Nombre: ' +value.nombre+ '</p>';
       usu += '<p> Apellido: ' +value.apellido+ '</p>';
@@ -364,9 +330,13 @@ $('#resultados').append(usu);
   });
 });
 
-var lista = []
+
 //agregar ejercicio a rutina
+
+
+//Nueva Rutina
 $(document).ready(function(){
+  var l = new Array ();
   $('#agregarEjercicio').click(function(){
     var ejer = $('#ejer').val();
     var descEjer = $('#descripcionEjer').val();
@@ -374,29 +344,29 @@ $(document).ready(function(){
       alert("Debe completar los campos");
     } else {
       var ejercicio = ejer+' '+descEjer;
-      lista.push(ejercicio);
-      console.log(lista);
+      l.push(ejercicio);
+      console.log(l);
       $('#ejer').text("");
       $('#descripcionEjer').text("");
       alert("El ejercicio se agrego correctamente");
+      localStorage.setItem("lista", JSON.stringify(l));
+      console.log(l);
     }
   })
-})
 
-//Nueva Rutina
-$(document).ready(function(){
+
   $('#crearRutina').click(function(e){
     e.preventDefault();
     var form = $('#nuevaRutina');
     //var data = $('#nuevaRutina').serializeArray();
-    console.log(lista);
+    console.log(l);
     //$('select[id=ejemplo2]').val()
     var tip=$('').val();
     console.log(tip);
     var data = {
         "usuario" : $('#usuarioRutina').val(),
         "tipo" : $('#tipoRutina').val(),
-        "ejercicios" : lista,
+        "ejercicios" : l,
         "nivel" : $('#nivelRutina').val(),
         "descripcionRutina" : $('#descRutina').val()
     }
@@ -444,7 +414,7 @@ $(document).ready(function(){
 
     $.getJSON("http://localhost:3000/usuarios",function(data){
     $.each(data, function(key,value){
-         if (usuario == value.nombre){
+         if (usuario == value.usuario && contraseña == value.contraseña){
            localStorage.setItem("usuarioo",JSON.stringify(value));
        window.location.replace("index.html");
        encontrado = "si";
@@ -458,30 +428,38 @@ $(document).ready(function(){
 
     $(document).ready(function(){
         var usuario = JSON.parse(localStorage.getItem("usuarioo"));
-        ruti = "";
+        var ruti = "";
+        var ejer = "";
 
         $('#bienvenido').html("bienvenido "+ usuario.nombre);
         if(usuario.nombre != "admin"){
-
-          $('#nuevaRutina').css("display","none");
-          $('#formuRutinas').css("display","none");
-          $('#tablaAdmin').css("display","none");
-          $('#tablaUsuario').css("display","block");
-          $('.admin').css("display","none");
+          $('.admin').css("display","none");}
+          else{  $('.usuario').css("display","none");
+        console.log("no esta entrando")}
 
             $.getJSON("http://localhost:3000/rutinas",function(data){
                 $.each(data, function(key,value){
                   if(value.usuario == usuario.nombre){
 
+
+              console.log(value);
+              console.log(value.ejercicios);
+                var lista =JSON.parse(localStorage.getItem("lista"));
+                console.log(lista);
+
+
                     ruti += '<tr id=tr'+value.id+'>';
                     ruti += '<td>' +value.tipo+ '</td>';
-                    ruti += '<td>' +value.descripcion+ '</td>';
+                    ruti += '<td>' +value.descripcionRutina+ '</td>';
+                    ruti += '<td> <a href="#modalRutina"> ver rutina </a> </td>';
                         ruti += '</tr>';
 
+              }})
 
-                  }})
-                      $('#rutinas_table_U').append(ruti);})}})
 
+                      $('#rutinas_table_U').append(ruti);
+                      $('#ejercicios').append(ejer);
+             })})
 
 
 /*$(document).ready(function(){

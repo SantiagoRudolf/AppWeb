@@ -59,45 +59,49 @@
 </head>
 <body>
 
-	<div class="fh5co-loader"></div>
+<div class="fh5co-loader"></div>
 
-	<div id="page">
-		<nav class="fh5co-nav" role="navigation">
-			<div class="top">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12 text-right">
-							<ul class="fh5co-social">
-										<li><span id="bienvenido"> </span></li>
-								<li><a href="#"><i class="icon-twitter"></i></a></li>
-								<li><a href="#"><i class="icon-dribbble"></i></a></li>
-								<li><a href="#"><i class="icon-github"></i></a></li>
-							</ul>
-						</div>
-					</div>
+<div id="page">
+<nav class="fh5co-nav" role="navigation">
+	<div class="top">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 text-right">
+					<ul class="fh5co-social">
+								<li><span id="bienvenido" style="color:black"> </span></li>
+						<li><a href="#"><i class="icon-twitter"></i></a></li>
+						<li><a href="#"><i class="icon-dribbble"></i></a></li>
+						<li><a href="#"><i class="icon-github"></i></a></li>
+							<li><a href="login.html"><span  style="color:black"> salir </span></a></li>
+					</ul>
 				</div>
 			</div>
-			<div class="top-menu">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-2">
-							<div id="fh5co-logo"><a href="index.html">Stamina<span>.</span></a></div>
-						</div>
-						<div class="col-xs-10 text-right menu-1">
-							<ul>
-								<li><a href="index.html">Inicio</a></li>
-								<li><a href="profesores.html">Profesores</a></li>
-								<li><a href="precios.html">Precios</a></li>
-								<li><a href="rutinas.html">Rutinas</a></li>
-								<li class="active"><a href="usuarios.html">Clientes</a></li>
-								<li><a href="contacto.html">Contacto</a></li>
-							</ul>
-						</div>
-					</div>
-
+		</div>
+	</div>
+	<div class="top-menu">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-2">
+					<div id="fh5co-logo"><a href="index.html">Stamina<span>.</span></a></div>
+				</div>
+				<div class="col-xs-10 text-right menu-1">
+					<ul>
+						<li class="active"><a href="index.html">Inicio</a></li>
+						<li><a href="profesores.html">profesores</a></li>
+						<li><a href="precios.html">Precios</a></li>
+						<li><a href="rutinas.html">Rutinas</a></li>
+					<li class="admin"><a href="usuarios.html">Clientes</a></li>
+							<li class="admin"><a href="pagos.html">Pagos</a></li>
+						</li>
+						<li class="usuario"><a href="contacto.html">Contacto</a></li>
+					</ul>
 				</div>
 			</div>
-		</nav>
+
+		</div>
+	</div>
+</nav>
+
 		<div style="float: right">
 			<a href="#openModal">HISTORIAL</a>
 		</div>
@@ -143,6 +147,7 @@
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center">
 					<form id="nuevoUsuario"  method="post" action="http://localhost:3000/usuarios">
+						<input type="text" class="form-control" name="usuario" placeholder="Usuario" style="margin-bottom:20px" required>
 						<input type="text" class="form-control" name="nombre" placeholder="Nombre" style="margin-bottom:20px" required>
 						<input type="text" class="form-control" name="apellido" placeholder="Apellido" style="margin-bottom:20px" required>
 						<select class="form-control" id="cargartipo" name="tipo" required style=" background-color:gray; margin-bottom:20px" >
@@ -156,6 +161,7 @@
 
 
 						<input type="text" class="form-control" name="estado" value="activo" style="visibility:hidden">
+								<input type="text" class="form-control" name="contraseña" value="123" style="visibility:hidden">
 						<button type="submit" class="btn btn-default" id="crear"> CREAR</button>
 						<button type="submit" class="btn btn-default"> CANCELAR</button>
 					</form>
