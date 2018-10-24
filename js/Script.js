@@ -320,6 +320,7 @@ $('#resultados').append(usu);
             ruti += '<td>' +value.tipo+ '</td>';
             ruti += '<td>' +value.usuario+ '</td>';
             ruti += '<td>' +value.descripcionRutina+ '</td>';
+            ruti += '<td><button id="ejerciciosVer" class="delete btn btn-danger" onclick ="verEjercicios('+value.id+')" >Ver Ejercicios</button> </td>';
             ruti += '<td><button id="borrarRutina" class="delete btn btn-danger" onclick ="borrarRutina('+value.id+')"  value="Eliminar">Eliminar</button></td>';
             ruti += '</tr>';
             $('#rutinas_table').append(ruti);
@@ -330,7 +331,27 @@ $('#resultados').append(usu);
   });
 });
 
+<<<<<<< HEAD
 
+=======
+function verEjercicios(id){
+  window.location="#ModalEjercicios";
+  $('#ejercicios_modal').empty();
+  $.getJSON("http://localhost:3000/rutinas",function(data){
+    $.each(data, function(key,value){
+      var idusu = value.id;
+      if (idusu == id){
+        ejer = '';
+        ejer += '<td>Proximamente</td>';
+        ejer += '<td>Proximanente</td>';
+        $('#ejercicios_modal').append(ejer);
+      }
+    })
+  })
+}
+
+var lista = []
+>>>>>>> c82bfa01b5a6fe1f6f398ec9e5dbc2bcf7cdee47
 //agregar ejercicio a rutina
 
 
