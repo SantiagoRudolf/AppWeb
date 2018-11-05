@@ -1,14 +1,6 @@
 {
   "usuarios": [
     {
-      "nombre": "augusto",
-      "apellido": "prueba",
-      "tipo": "Spining",
-      "fecha": "2018-11-09",
-      "estado": "activo",
-      "id": 1
-    },
-    {
       "usuario": "admin",
       "nombre": "admin",
       "apellido": "admin",
@@ -17,14 +9,6 @@
       "estado": "activo",
       "contraseña": "admin",
       "id": 1
-    },
-    {
-      "nombre": "agustin",
-      "apellido": "lucero",
-      "tipo": "gimnasio",
-      "fecha": "2018-10-20",
-      "estado": "activo",
-      "id": 2
     },
     {
       "usuario": "agustin11",
@@ -45,6 +29,16 @@
       "estado": "activo",
       "contraseña": "123",
       "id": 4
+    },
+    {
+      "usuario": "augusto1",
+      "nombre": "augusto",
+      "apellido": "prueba",
+      "tipo": "gimnasio",
+      "fecha": "2018-11-05",
+      "estado": "activo",
+      "contraseña": "123",
+      "id": 5
     }
   ],
   "historial": [
@@ -234,15 +228,12 @@
   ],
   "rutinas": [
     {
-      "usuario": "mariano",
-      "tipo": "Crossfit",
-      "ejercicios[]": [
-        "pecho plano  8 repeticiones",
-        "sentadillas 8 repeticiones"
-      ],
+      "usuario": "agustin11",
+      "tipo": "gimnasio",
+      "ejercicios[]": "asd asd",
       "nivel": "uno",
-      "descripcionRutina": "nose que poner",
-      "id": "1"
+      "descripcionRutina": "asdas",
+      "id": 1
     }
   ]
 }

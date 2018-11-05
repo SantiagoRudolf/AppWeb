@@ -4,7 +4,7 @@ $(document).ready(function(){
  $.getJSON("http://localhost:3001/Usuarios",function(data){
  	var usu = '';
   console.log(data);
- 	$('#resultados').text("");
+ 	$('#usuarios').text("");
 
  	var estado = $('#estado').val();
  	var tipo = $('#TIPO').val();
@@ -29,26 +29,15 @@ $(document).ready(function(){
   console.log(nombre);
 
 
-    if ( (estado == est || estado =="vacio") && (tipo == ti || tipo =="vacio")&& (nombre == nomb || nombre == "vacio" && nomb != "admin") && i <10) {
-      usu += '<div class="col-md-3 animate-box fadeInUp animated-fast busquedaclientes" id=div'+value.id+'>';
-   		usu += '<p> Nombre: ' +value.nombre+ '</p>';
-      usu += '<p> Apellido: ' +value.apellido+ '</p>';
-   		usu += '<p> Tipo: ' +value.tipo+'</p>';
-      	usu += '<p> Estado: ' +value.estado+'</p>';
-
-      usu += '<button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')"  value="Eliminar">Eliminar</button>';
-      usu +=  '<button class="compartir" onclick="rutinas('+value.id+')">rutinas</button>';
-   		usu += '</div>';
-      ruti = '';
-      ruti += '<tr>';
-      ruti += '<td>' +value.nombre+ '</td>';
-      ruti += '<td>' +value.usuario+ '</td>';
-      ruti += '<td>' +value.descripcionRutina+ '</td>';
-      ruti += '<td><button id="ejerciciosVer" class="delete btn btn-danger" onclick ="verEjercicios('+value.id+')" >Ver Ejercicios</button> </td>';
-      ruti += '<td><button id="borrarRutina" class="delete btn btn-danger" onclick ="borrarRutina('+value.id+')"  value="Eliminar">Eliminar</button></td>';
-      ruti += '</tr>';
-      $('#rutinas_table').append(ruti);
-      i= i+1;
+    if ( (estado == est || estado =="vacio") && (tipo == ti || tipo =="vacio")&& (nombre == nomb || nombre == "vacio" && nomb != "admin") && i <10) { 
+      usu += '<tr>';
+      usu += '<td>' +value.nombre+ '</td>';
+      usu += '<td>' +value.apellido+ '</td>';
+      usu += '<td>' +value.estado+ '</td>';
+      usu += '<td><button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')"  value="Eliminar">Eliminar</button></td>';
+      usu += '<td><button class="compartir" onclick="rutinas('+value.id+')">rutinas</button></td>';
+      usu += '</tr>';
+      i = i+1;
         /*
         AGREGA AL HISTORIAL
         */
@@ -78,7 +67,7 @@ if (i==10 ){
 if (usu =="") {
   usu += ' <h3> no se encontraron resultados </h3>';
 }
-$('#resultados').append(usu);
+$('#usuarios').append(usu);
 
 
  });
@@ -260,15 +249,14 @@ $(document).ready(function(){
 
 
     if ( (estado == est || estado =="vacio") && (tipo == ti || tipo =="vacio")&& (nombre == nomb || nombre == "vacio") ) {
-      usu += '<div class="col-md-3 animate-box fadeInUp animated-fast busquedaclientes" id=div'+value.id+'>';
-       usu += '<p> Nombre: ' +value.nombre+ '</p>';
-      usu += '<p> Apellido: ' +value.apellido+ '</p>';
-       usu += '<p> Tipo: ' +value.tipo+'</p>';
-       usu += '<p> Estado: ' +value.estado+'</p>';
-
-      usu += '<button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')"  value="Eliminar">Eliminar</button>';
-      usu +=  '<button class="compartir" onclick="compartir('+value.id+')">Compartir</button>';
-       usu += '</div>';
+       usu = '';
+       usu += '<tr>';
+       usu += '<td>' +value.nombre+ '</td>';
+       usu += '<td>' +value.apellido+ '</td>';
+       usu += '<td>' +value.estado+ '</td>';
+       usu += '<td><button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')"  value="Eliminar">Eliminar</button>';
+       usu += '<button class="compartir" onclick="compartir('+value.id+')">Compartir</button>';
+       usu += '</tr>';
 
         /*
         AGREGA AL HISTORIAL
@@ -654,3 +642,41 @@ recargar();
              }, margins
          );
      }
+
+     function rutinas(id){
+       $.ajax({
+         type: "GET",
+         dataType: "json",
+         url: "http://localhost:3000/usuarios/"+id,
+           success: function(data) {
+         var usuario = data.usuario;
+        localStorage.setItem("usuariorutina",usuario);
+
+       window.location.href = "rutinas.html"
+     }})}
+
+        $(document).ready(function(){
+          var usuario = localStorage.getItem("usuariorutina");
+      if (usuario != ""){
+        $("#usuarioRutina").val(usuario);
+        localStorage.setItem("usuariorutina","");
+
+        $.getJSON("http://localhost:3000/rutinas",function(data){
+
+
+          $.each(data, function(key,value){
+            if ( value.usuario == usuario ){
+                ruti = '';
+                ruti += '<tr id=tr'+value.id+'>';
+                ruti += '<td>' +value.tipo+ '</td>';
+                ruti += '<td>' +value.usuario+ '</td>';
+                ruti += '<td>' +value.descripcionRutina+ '</td>';
+                ruti += '<td><button id="ejerciciosVer" class="delete btn btn-danger" onclick ="verEjercicios('+value.id+')" >Ver Ejercicios</button> </td>';
+                ruti += '<td><button id="borrarRutina" class="delete btn btn-danger" onclick ="borrarRutina('+value.id+')"  value="Eliminar">Eliminar</button></td>';
+                ruti += '</tr>';
+                $('#rutinas_table').append(ruti);
+            }
+          })
+
+        });
+      }})
