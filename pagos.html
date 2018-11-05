@@ -49,8 +49,7 @@
 	<![endif]-->
 	<script language="JavaScript" type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
 	<script language="JavaScript" type="text/javascript" src="http://malsup.github.com/jquery.form.js"></script>
-	<link rel="stylesheet" href="css/autocomplete.css" type="text/css">
-	<script src="js/autocomplete.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
 	<script src ="js/Script.js"> </script>
 
 	</head>
@@ -147,7 +146,17 @@
 		</div>
 	</div>
 
+	<div id="imprimir" class="modalDialog" style="width: 50%;  margin-left: 25%">
+		<a href="#close" title="Close" class="close">X</a>
+		<div>
+			<p> Comprobante de pago </p>
+			<h2 id="comprobanteNombre"> <h2>
+			<h2 id="fechaPago"> <h2>
+				<h2 id="fechaVencimiento"> <h2>
+						<input type="button" id="B_imprimir" value="imprimir" onclick="pruebaDivAPdf()">
 
+		</div>
+	</div>
 
 
 

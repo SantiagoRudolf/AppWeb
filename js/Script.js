@@ -562,6 +562,7 @@ $('#fecha').val(f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());
 function agregarmes(id){
 var usuario ="";
 var f ="";
+var faux="";
 
   $.ajax({
     type: "GET",
@@ -571,11 +572,16 @@ var f ="";
     usuario= data;
 
      var f = new Date(usuario.fecha);
-
+     faux = f ;
 f.setMonth(f.getMonth() + 1);
 console.log(f);
 f = (  f.getFullYear() +"-"+(f.getMonth() +1)+"-"+f.getDate())
+faux = (  faux.getFullYear() +"-"+(faux.getMonth() )+"-"+faux.getDate())
   if (confirm('¿agregar un mes a '+usuario.nombre+" "+ usuario.apellido+"?")){
+    $('#comprobanteNombre').html("Usuario:" +usuario.nombre+" "+ usuario.apellido) ;
+    $('#fechaPago').html('fecha: '+faux);
+    $('#fechaVencimiento').html('nuevo vencimiento: '+f);
+    window.location="#imprimir";
  $.ajax({
     type: "PATCH",
     dataType: "string",
@@ -584,6 +590,8 @@ f = (  f.getFullYear() +"-"+(f.getMonth() +1)+"-"+f.getDate())
   })
   recargar();
 }recargar();}})}
+
+
 
   function recargar(){
     document.getElementById("botonPagos").click();
@@ -605,3 +613,35 @@ $('#botonEditar').click(function(){
 recargar();
 });;
  recargar();}
+
+
+
+     function pruebaDivAPdf() {
+         var pdf = new jsPDF('p', 'pt', 'letter');
+         source = $('#imprimir')[0];
+
+         specialElementHandlers = {
+             '#bypassme': function (element, renderer) {
+                 return true
+             }
+         };
+         margins = {
+             top: 80,
+             bottom: 60,
+             left: 40,
+             width: 522
+         };
+
+         pdf.fromHTML(
+             source,
+             margins.left, // x coord
+             margins.top, { // y coord
+                 'width': margins.width,
+                 'elementHandlers': specialElementHandlers
+             },
+
+             function (dispose) {
+                 pdf.save('Prueba.pdf');
+             }, margins
+         );
+     }
