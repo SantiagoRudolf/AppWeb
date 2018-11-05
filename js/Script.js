@@ -29,7 +29,7 @@ $(document).ready(function(){
   console.log(nombre);
 
 
-    if ( (estado == est || estado =="vacio") && (tipo == ti || tipo =="vacio")&& (nombre == nomb || nombre == "vacio" && nomb != "admin") && i <10) { 
+    if ( (estado == est || estado =="vacio") && (tipo == ti || tipo =="vacio")&& (nombre == nomb || nombre == "vacio" && nomb != "admin") && i <10) {
       usu += '<tr>';
       usu += '<td>' +value.nombre+ '</td>';
       usu += '<td>' +value.apellido+ '</td>';
@@ -453,7 +453,7 @@ $(document).ready(function(){
 
             $.getJSON("http://localhost:3000/rutinas",function(data){
                 $.each(data, function(key,value){
-                  if(value.usuario == usuario.nombre){
+                  if(value.usuario == usuario.usuario){
 
 
               console.log(value);
