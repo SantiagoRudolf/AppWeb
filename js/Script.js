@@ -37,8 +37,17 @@ $(document).ready(function(){
       	usu += '<p> Estado: ' +value.estado+'</p>';
 
       usu += '<button id="borrar" class="delete btn btn-danger" onclick ="borrar('+value.id+')"  value="Eliminar">Eliminar</button>';
-      usu +=  '<button class="compartir" onclick="compartir('+value.id+')">Compartir</button>';
+      usu +=  '<button class="compartir" onclick="rutinas('+value.id+')">rutinas</button>';
    		usu += '</div>';
+      ruti = '';
+      ruti += '<tr>';
+      ruti += '<td>' +value.nombre+ '</td>';
+      ruti += '<td>' +value.usuario+ '</td>';
+      ruti += '<td>' +value.descripcionRutina+ '</td>';
+      ruti += '<td><button id="ejerciciosVer" class="delete btn btn-danger" onclick ="verEjercicios('+value.id+')" >Ver Ejercicios</button> </td>';
+      ruti += '<td><button id="borrarRutina" class="delete btn btn-danger" onclick ="borrarRutina('+value.id+')"  value="Eliminar">Eliminar</button></td>';
+      ruti += '</tr>';
+      $('#rutinas_table').append(ruti);
       i= i+1;
         /*
         AGREGA AL HISTORIAL

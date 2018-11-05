@@ -35,6 +35,16 @@
       "estado": "activo",
       "contraseña": "123",
       "id": 3
+    },
+    {
+      "usuario": "alberto1",
+      "nombre": "alberto",
+      "apellido": "suarez",
+      "tipo": "gimnasio",
+      "fecha": "2018-11-05",
+      "estado": "activo",
+      "contraseña": "123",
+      "id": 4
     }
   ],
   "historial": [
@@ -210,6 +220,16 @@
       "fecha": "",
       "estado": "activo",
       "id": "3"
+    },
+    {
+      "usuario": "alberto1",
+      "nombre": "alberto",
+      "apellido": "suarez",
+      "tipo": "gimnasio",
+      "fecha": "2018-11-05",
+      "estado": "activo",
+      "contraseña": "123",
+      "id": "4"
     }
   ],
   "rutinas": [
