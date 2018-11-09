@@ -142,6 +142,7 @@
 			<th>Tipo</th>
 			<th>Nombre</th>
 			<th>Descripcion</th>
+			<th>Ejercicios</th>
 			<th>Eliminar</th>
 		</tr>
 		<tbody id="rutinas_table"> </tbody>
@@ -176,9 +177,16 @@
 							<option value="Crossfit">Crossfit</option>
 						</select>
 						<br>
-						<input id="ejer" type="text" class="form-control" name="ejercicio" placeholder="Ejercicio" style="margin-bottom:20px" required>
+						<input id="ejercic" type="text" class="form-control" name="ejercicio" placeholder="Ejercicio" style="margin-bottom:20px" required>
 						<input id="descripcionEjer"type="text" class="form-control" name="ejercicio" placeholder="Descripcion del ejercicio" style="margin-bottom:20px" required>
 						<button type="button" class="btn btn-default" id="agregarEjercicio">Agregar ejercicio</button>
+						<table class="table table-bordered table-striped" >
+							<tr>
+								<th>Ejercicio</th>
+								<th>Descripcion</th>
+							</tr>
+							<tbody id="cargandoEjercicios"></tbody>
+						</table>
 						<select class="form-control"  id="nivelRutina" name="nivel" required style=" background-color:gray" >
 							<option value="0">seleccione el nivel </option>
 							<option value="uno">NIVEL 1</option>
@@ -197,14 +205,15 @@
 	<div id="modalRutina" class="modalDialog">
 		<a href="#close" title="Close" class="close">X</a>
 		<div>
-			<p> Historial </p>
+			<p> <h1>Ejercicios</h1></p>
 			<table class="table table-bordered table-striped" >
 				<tr>
-					<th>ejercicios</th>
-
+					<th>Ejercicio</th>
+					<th>Descripcion</th>
 				</tr>
-				<tbody id="ejercicios"> </tbody>
+				<tbody id="ejercicios"></tbody>
 			</table>
+			<button id="guardarRutinaNueva" class="btn btn-default" onclick ="guardarEjercicios()">Guardar Ejercicios</button>
 		</div>
 	</div>
 

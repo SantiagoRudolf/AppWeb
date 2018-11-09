@@ -15,7 +15,7 @@
       "nombre": "agustin",
       "apellido": "Lucero",
       "tipo": "gimnasio",
-      "fecha": "2018-10-24",
+      "fecha": "2018-11-23",
       "estado": "activo",
       "contraseña": "123",
       "id": 3
@@ -228,12 +228,20 @@
   ],
   "rutinas": [
     {
-      "usuario": "agustin11",
+      "usuario": "pato",
       "tipo": "gimnasio",
-      "ejercicios[]": "asd asd",
-      "nivel": "uno",
-      "descripcionRutina": "asdas",
+      "ejercicios": "[{\"ejer\":\"hola\",\"desc\":\"chau\"},{\"ejer\":\"123\",\"desc\":\"123\"}]",
+      "nivel": "tres",
+      "descripcionRutina": "123",
       "id": 1
+    },
+    {
+      "usuario": "ramiro",
+      "tipo": "gimnasio",
+      "ejercicios": "[{\"ejer\":\"pesas\",\"desc\":\"10x3 mancuernas 5kg\"},{\"ejer\":\"pesas\",\"desc\":\"10x3 barra 35kg\"}]",
+      "nivel": "dos",
+      "descripcionRutina": "ejercicios combinados",
+      "id": 2
     }
   ]
 }
