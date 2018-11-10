@@ -1,3 +1,4 @@
+var l = new Array;
 $(document).ready(function () {
   $('#boton').click(function () {
     $("#employee_table").empty();
@@ -373,6 +374,31 @@ function guardarEjercicios() {
   });
 }
 
+function cargarPlantilla(id) {
+  $.getJSON("http://localhost:3000/rutinas", function (data) {
+    $.each(data, function (key, value) {
+      if (value.id == id) {
+        var prue = JSON.parse(value.ejercicios);
+        $('#descRutina').val(value.descripcionRutina);
+        $('#tipoRutina').val(value.tipo);
+        $('#cargandoEjercicios').empty();
+        prue.forEach(function(elemento, indice, array){
+          tab = '';
+          tab += '<tr>';
+          tab += '<td>'+elemento.ejer+'</td>';
+          tab += '<td>'+elemento.desc+'</td>';
+          tab += '</tr>';
+          $('#cargandoEjercicios').append(tab);
+        })
+        $('#nivelRutina').val(value.nivel)
+        l = prue.slice();
+        localStorage.setItem('listaPrecargada', JSON.stringify(l));
+        console.log(l);
+      }
+    })
+  })
+}
+
 function verEjercicios(id) {
   window.location = "#modalRutina";
   localStorage.setItem('idUsuarioCambiado', JSON.stringify(id));
@@ -403,7 +429,6 @@ function verEjercicios(id) {
 
 //Nueva Rutina
 $(document).ready(function () {
-  var l = new Array();
   $('#agregarEjercicio').click(function () {
     var ejer = $('#ejercic').val();
     var descEjer = $('#descripcionEjer').val();
@@ -416,8 +441,8 @@ $(document).ready(function () {
       }
       l.push(ejercicio);
       console.log(l);
-      $('#ejercic').text("");
-      $('#descripcionEjer').text("");
+      $('#ejercic').text(" ");
+      $('#descripcionEjer').text(" ");
       alert("El ejercicio se agrego correctamente");
       localStorage.setItem("lista", JSON.stringify(l));
     }
@@ -436,7 +461,12 @@ $(document).ready(function () {
   $('#crearRutina').click(function (e) {
     e.preventDefault();
     var form = $('#nuevaRutina');
-    var lis = JSON.stringify(l);
+    if ( l == [] ) {
+      var lis = JSON.stringify(JSON.parse(localStorage.getItem('listaPrecargada')));
+    } else {
+      var lis = JSON.stringify(l);
+    }
+    
     console.log(lis)
     var dato = {
         "usuario": $('#usuarioRutina').val(),

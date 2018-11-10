@@ -242,6 +242,54 @@
       "nivel": "dos",
       "descripcionRutina": "ejercicios combinados",
       "id": 2
+    },
+    {
+      "usuario": "Plantilla 1",
+      "tipo": "gimnasio",
+      "ejercicios": "[{\"ejer\":\"Ejercicio 1\",\"desc\":\"Descripcion 1\"},{\"ejer\":\"Ejercicio 2\",\"desc\":\"Descripcion 3\"},{\"ejer\":\"Ejercicio 3\",\"desc\":\"Descripcion 3\"},{\"ejer\":\"Ejercicio 4\",\"desc\":\"Descripcion 4\"},{\"ejer\":\"Ejercicio 5\",\"desc\":\"Descripcion 5\"},{\"ejer\":\"Ejercicio 6\",\"desc\":\"Descripcion 6\"},{\"ejer\":\"Ejercicio 7\",\"desc\":\"Descripcion 7\"}]",
+      "nivel": "uno",
+      "descripcionRutina": "Descripcion de la Plantilla 1",
+      "id": 3
+    },
+    {
+      "usuario": "Plantilla 2",
+      "tipo": "gimnasio",
+      "ejercicios": "[{\"ejer\":\"Press banca\",\"desc\":\"4x10\"},{\"ejer\":\"Remo con barra\",\"desc\":\"3x12\"},{\"ejer\":\"Press con mancuernas\",\"desc\":\"4x12\"},{\"ejer\":\"Apertura\",\"desc\":\"3x10\"},{\"ejer\":\"Pullover con mancuerna\",\"desc\":\"4x12\"},{\"ejer\":\"Curl con barra\",\"desc\":\"3x10\"},{\"ejer\":\"Curl martillo alterno\",\"desc\":\"3x12\"}]",
+      "nivel": "dos",
+      "descripcionRutina": "Fortalecimiento de Pecho y Biceps",
+      "id": 4
+    },
+    {
+      "usuario": "valen123",
+      "tipo": "gimnasio",
+      "ejercicios": "[]",
+      "nivel": "dos",
+      "descripcionRutina": "Fortalecimiento de Pecho y Biceps",
+      "id": 5
+    },
+    {
+      "usuario": "jh",
+      "tipo": "gimnasio",
+      "ejercicios": "[{\"ejer\":\"hgc\",\"desc\":\"jhv\"}]",
+      "nivel": "dos",
+      "descripcionRutina": "hgv",
+      "id": 6
+    },
+    {
+      "usuario": "hola",
+      "tipo": "gimnasio",
+      "ejercicios": "[{\"ejer\":\"Press banca\",\"desc\":\"4x10\"},{\"ejer\":\"Remo con barra\",\"desc\":\"3x12\"},{\"ejer\":\"Press con mancuernas\",\"desc\":\"4x12\"},{\"ejer\":\"Apertura\",\"desc\":\"3x10\"},{\"ejer\":\"Pullover con mancuerna\",\"desc\":\"4x12\"},{\"ejer\":\"Curl con barra\",\"desc\":\"3x10\"},{\"ejer\":\"Curl martillo alterno\",\"desc\":\"3x12\"}]",
+      "nivel": "dos",
+      "descripcionRutina": "Fortalecimiento de Pecho y Biceps",
+      "id": 7
+    },
+    {
+      "usuario": "Plantilla Espalda y Triceps",
+      "tipo": "gimnasio",
+      "ejercicios": "[{\"ejer\":\"Remo con barra\",\"desc\":\"3x12\"},{\"ejer\":\"Remo barra agarre invertido\",\"desc\":\"3x12\"},{\"ejer\":\"Remo una mano con mancuerna\",\"desc\":\"3x10\"},{\"ejer\":\"Patadas con mancuerna\",\"desc\":\"3x12\"},{\"ejer\":\"Press Frances\",\"desc\":\"3x10\"},{\"ejer\":\"Flexiones manos juntas\",\"desc\":\"3 al fallo\"}]",
+      "nivel": "tres",
+      "descripcionRutina": "Fortalecimiento de Espalda y Triceps",
+      "id": 8
     }
   ]
 }
